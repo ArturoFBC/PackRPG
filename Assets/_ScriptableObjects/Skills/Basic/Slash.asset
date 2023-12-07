@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: Slash
+  m_EditorClassIdentifier: 
+  description: Slashes the enemy with a sharp claw or weapon, has high critical chance.
+  icon: {fileID: 21300000, guid: 651481090a2d7e94fa7068b880861aba, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 5738337680079279616, guid: ffcbbbb2eff7c60449efac6cae2aa86d, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 0
+  useRange: 4
+  effectRange: 0
+  damage: 20
+  criticalChance: 0.12
+  criticalDamage: 0
+  damageType: 2
+  damageClass: 1
+  lifeSteal: 0
+  cooldown: 0
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 4
+  category: 0
+  animationTrigger: ClawAttack
+  executionDuration: 2.5
+  hitInstant: 0.2
+  creationsDuration: 0
+  manaCost: 0
+  castingSound: {fileID: 0}

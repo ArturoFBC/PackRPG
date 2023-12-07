@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: LickWounds
+  m_EditorClassIdentifier: 
+  description: Licks a fellow pack member, healing its wounds.
+  icon: {fileID: 21300000, guid: 211a83cb9498fc24195dda1b140f2e86, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 1160831658109102, guid: 5403d540e87f73b41a95f2f5cbdc7bf3, type: 3}
+  targetVFX: {fileID: 1197889801615634, guid: a0b793d2ca292934e8c53c3f8eadc0c3, type: 3}
+  targetType: 1
+  useRange: 4
+  effectRange: 0
+  damage: 70
+  criticalChance: 0
+  criticalDamage: 0
+  damageType: 0
+  damageClass: 0
+  lifeSteal: 0
+  cooldown: 4
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 00000000
+  skillImplementation: 2
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 1
+  hitInstant: 0.2
+  creationsDuration: 0
+  manaCost: 15
+  castingSound: {fileID: 8300000, guid: c1868fcd96eca7f46b725c4378d2a61d, type: 3}

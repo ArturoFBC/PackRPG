@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: Buzz
+  m_EditorClassIdentifier: 
+  description: Sends static waves in all directions, damaging and electrocuting enemies.
+  icon: {fileID: 21300000, guid: afdb68b1d157e50488ee0b3a20b12afb, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 8289907854891645718, guid: b176f57f41b9ca145bb45f94953dbe1d, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 2
+  useRange: 0
+  effectRange: 5
+  damage: 30
+  criticalChance: 0.05
+  criticalDamage: 0
+  damageType: 6
+  damageClass: 2
+  lifeSteal: 0
+  cooldown: 10
+  StatModifiersForTarget: []
+  StatusEffects:
+  - target: 0
+    duration: 5
+    status: 2
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 1700000013000000
+  skillImplementation: 0
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 1
+  hitInstant: 0.4
+  creationsDuration: 0
+  manaCost: 25
+  castingSound: {fileID: 8300000, guid: c35569e5a49801c4b9f2b14b417bbaa3, type: 3}

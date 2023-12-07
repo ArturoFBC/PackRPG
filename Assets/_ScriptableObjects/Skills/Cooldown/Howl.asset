@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: Howl
+  m_EditorClassIdentifier: 
+  description: Increases strength of the party for a few seconds.
+  icon: {fileID: 21300000, guid: e8f5de78562d44f4f97e60ab9fbfe60b, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 0}
+  targetVFX: {fileID: 8388827132752087007, guid: d01c7d429ebe769439fa5506677776fb,
+    type: 3}
+  targetType: 2
+  useRange: 0
+  effectRange: 15
+  damage: 0
+  criticalChance: 0
+  criticalDamage: 0
+  damageType: 0
+  damageClass: 0
+  lifeSteal: 0
+  cooldown: 3
+  StatModifiersForTarget:
+  - target: 0
+    duration: 10
+    skillRefference: {fileID: 11400000}
+    stat: 1
+    value: 0.3
+    timed: 0
+    timeRemaining: 0
+    stacks: 0
+    maxStacks: 1
+    icon: {fileID: 21300000, guid: e8f5de78562d44f4f97e60ab9fbfe60b, type: 3}
+    skillCondition:
+      type: 0
+      floatValue: 0
+      tagValue: 0
+    targetCondition:
+      type: 0
+      floatValue: 0
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 7
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 0.5
+  hitInstant: 0.2
+  creationsDuration: 0
+  manaCost: 20
+  castingSound: {fileID: 8300000, guid: bb8aa2afff27d7a469d0ac6b93926b2a, type: 3}

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca475a112dbfc54287ed195a2b059e3, type: 3}
+  m_Name: Decimate
+  m_EditorClassIdentifier: 
+  description: Deals 30% more damage against enemies with more than half HP.
+  icon: {fileID: 21300000, guid: 7500ad56ffa691c4e8d6511708d8e43b, type: 3}
+  projectile: {fileID: 0}
+  useVisualEffect: {fileID: 0}
+  targetType: 0
+  useRange: 0
+  effectRange: 0
+  damage: 0
+  criticalChance: 0
+  criticalDamage: 0
+  damageType: 0
+  damageClass: 0
+  lifeSteal: 0
+  cooldown: 0
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition:
+  - condition:
+      type: 0
+      floatValue: 0
+    modifier:
+      target: 2
+      duration: 0
+      skillRefference: {fileID: 11400000}
+      stat: 22
+      value: 0.3
+      timed: 0
+      timeRemaining: 0
+      stacks: 0
+      maxStacks: 1
+      icon: {fileID: 21300000, guid: 7500ad56ffa691c4e8d6511708d8e43b, type: 3}
+      skillCondition:
+        type: 0
+        floatValue: 0
+        tagValue: 0
+      targetCondition:
+        type: 1
+        floatValue: 0.5
+  impactSound: {fileID: 0}
+  tags: 
+  impelementation: 0

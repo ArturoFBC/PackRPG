@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: Reverb
+  m_EditorClassIdentifier: 
+  description: Creates a reverb area. Enemies inside this area receive damage over
+    time and sound based skills are more effective
+  icon: {fileID: 21300000, guid: 9bbcb7eecde5ce54a93fb9190b513850, type: 3}
+  projectile: {fileID: 1760611483516300, guid: 6687465a15c5b9e458c5e13c38d738fa, type: 3}
+  useVFX: {fileID: 0}
+  targetVFX: {fileID: 0}
+  targetType: 3
+  useRange: 5
+  effectRange: 4
+  damage: 10
+  criticalChance: 0
+  criticalDamage: 0
+  damageType: 3
+  damageClass: 2
+  lifeSteal: 0
+  cooldown: 15
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 3
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 1
+  hitInstant: 0
+  creationsDuration: 5
+  manaCost: 40
+  castingSound: {fileID: 0}

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35887d19ae248a145ae5b4e957a73ab6, type: 3}
+  m_Name: Marsh 1
+  m_EditorClassIdentifier: 
+  scene:
+    sceneAsset: {fileID: 102900000, guid: 816e946f375602c4298fc4bb280cb750, type: 3}
+    scenePath: Assets/Levels/Marsh/Marsh.unity
+  areaLevel: 2
+  species:
+  - species: {fileID: 11400000, guid: 22149a329038bf54a88030f1e8feb959, type: 2}
+    spawnRate: 1
+  - species: {fileID: 11400000, guid: 59390ef64cd35f741813dec5310b3801, type: 2}
+    spawnRate: 1
+  - species: {fileID: 11400000, guid: 7e03982100b6db34ea78e24b8ad05988, type: 2}
+    spawnRate: 1
+  items:
+  - materialItem: {fileID: 11400000, guid: 9063ddd8099ac8447a3bb3df4d75b90c, type: 2}
+    recipe: {fileID: 0}
+    species: {fileID: 0}
+    rate: 0.1
+  - materialItem: {fileID: 11400000, guid: 49c52aae6dde65b4db3de42ea1eea495, type: 2}
+    recipe: {fileID: 0}
+    species: {fileID: 0}
+    rate: 0.1
+  - materialItem: {fileID: 11400000, guid: 23d229d81ec38844da63d2b4035a08c8, type: 2}
+    recipe: {fileID: 0}
+    species: {fileID: 0}
+    rate: 0.1
+  - materialItem: {fileID: 11400000, guid: 24e41dbf16e303b43a3e8d6b4f0c6a2f, type: 2}
+    recipe: {fileID: 0}
+    species: {fileID: 0}
+    rate: 0.1
+  - materialItem: {fileID: 11400000, guid: 86a432768487dfb4e8973caa5a95662e, type: 2}
+    recipe: {fileID: 0}
+    species: {fileID: 0}
+    rate: 0.1
+  - materialItem: {fileID: 0}
+    recipe: {fileID: 11400000, guid: e05df172b81441f408e77c30b0c02500, type: 2}
+    species: {fileID: 0}
+    rate: 0.1
+  - materialItem: {fileID: 0}
+    recipe: {fileID: 11400000, guid: 682c790ad113fc942b2092491f11ca2d, type: 2}
+    species: {fileID: 0}
+    rate: 0.1
+  - materialItem: {fileID: 0}
+    recipe: {fileID: 11400000, guid: 670ee7c57e6fbb942a0c65626ff4b842, type: 2}
+    species: {fileID: 0}
+    rate: 0.1
+  startingPosition: {x: -187, y: -2.7, z: -185}
+  exitToNextAreaPosition: {x: -187, y: 0.5, z: 180}
+  nextArea: {fileID: 11400000, guid: 47c3c4c80ffd64e44aa2d3659f5cae64, type: 2}

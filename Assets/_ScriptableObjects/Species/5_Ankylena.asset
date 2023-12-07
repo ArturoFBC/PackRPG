@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 5_Ankylena
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 100
+  - 70
+  - 110
+  - 55
+  - 110
+  - 75
+  - 75
+  - 75
+  - 7
+  - 12
+  - 18
+  - 0
+  - 7
+  - 18
+  - 0
+  - 0
+  - 1
+  - 1
+  description: 
+  model: {fileID: 4796359780951156548, guid: d7429a15e3b69ca4c86dfe221b28257e, type: 3}
+  miniature: {fileID: 21300000, guid: 0e379d5eda26c9a4eabe5524ff6ca163, type: 3}
+  closeUpImage: {fileID: 21300000, guid: 9a7d960a22634e547ac808bcd69990c6, type: 3}
+  stepSounds:
+  - {fileID: 8300000, guid: ddda8f0a0c7a5ca44bb45a4801eca2c3, type: 3}
+  - {fileID: 8300000, guid: 08cb436efa1674843923c874a2d6c7f8, type: 3}
+  - {fileID: 8300000, guid: c1868fcd96eca7f46b725c4378d2a61d, type: 3}
+  skillList:
+  - skill: {fileID: 11400000, guid: 4a37b111e928e624da1ef8510274ae50, type: 2}
+    level: 7
+  - skill: {fileID: 11400000, guid: 472a3ff7d52c10d4baf2f021f4b4e819, type: 2}
+    level: 7
+  equipmentSlots: 000000000000000001000000
+  possibleMorphs:
+  - morphConditions:
+    - type: 0
+      value: 30
+    morphEssenceCosts:
+    - species: {fileID: 11400000, guid: e6d0573eb331e2a41a5ae01d0af2a9d2, type: 2}
+      amount: 50
+    targetSpecies: {fileID: 11400000, guid: 1d83bced8cf2f5b409a6a52e5c01a848, type: 2}

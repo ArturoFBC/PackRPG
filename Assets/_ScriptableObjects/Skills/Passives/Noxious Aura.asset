@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca475a112dbfc54287ed195a2b059e3, type: 3}
+  m_Name: Noxious Aura
+  m_EditorClassIdentifier: 
+  description: Poisons enemies in close range. The poison gets worse over time up
+    to a cap.
+  icon: {fileID: 21300000, guid: 1e9f0c69fa772164aa7a55aa71056fe3, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 7203935967558265409, guid: c2a7647b10003b24bb3b07d7ce9bcc47, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 0
+  useRange: 0
+  effectRange: 4
+  damage: 0
+  criticalChance: 0
+  criticalDamage: 0
+  damageType: 1
+  damageClass: 2
+  lifeSteal: 0
+  cooldown: 2
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects:
+  - target: 0
+    duration: 3
+    skillRefference: {fileID: 11400000}
+    damageInstance:
+      damage: 8
+      type: 1
+      damageClass: 2
+    timed: 1
+    timeRemaining: 3
+    stacks: 1
+    maxStacks: 5
+    icon: {fileID: 21300000, guid: 1e9f0c69fa772164aa7a55aa71056fe3, type: 3}
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  impelementation: 1

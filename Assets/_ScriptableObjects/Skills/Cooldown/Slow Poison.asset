@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: Slow Poison
+  m_EditorClassIdentifier: 
+  description: Deals weak damage over time initially, but stacks many times.
+  icon: {fileID: 21300000, guid: 2300fad9adc07164dbc352b2731c1038, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 0}
+  targetVFX: {fileID: 5369556712285228174, guid: 4df36887fdbce164ab4369eab5001164,
+    type: 3}
+  targetType: 0
+  useRange: 4
+  effectRange: 0
+  damage: 0
+  criticalChance: 0
+  criticalDamage: 0
+  damageType: 0
+  damageClass: 0
+  lifeSteal: 0
+  cooldown: 3.5
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects:
+  - target: 0
+    duration: 5
+    skillRefference: {fileID: 11400000}
+    damageInstance:
+      damage: 25
+      type: 2
+      damageClass: 2
+    timed: 1
+    timeRemaining: 0
+    stacks: 1
+    maxStacks: 5
+    icon: {fileID: 21300000, guid: 2300fad9adc07164dbc352b2731c1038, type: 3}
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 4
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 1
+  hitInstant: 0.3
+  creationsDuration: 0
+  manaCost: 15
+  castingSound: {fileID: 0}

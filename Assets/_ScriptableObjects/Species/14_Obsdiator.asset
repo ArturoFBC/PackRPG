@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 14_Obsdiator
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 110
+  - 70
+  - 120
+  - 50
+  - 110
+  - 70
+  - 90
+  - 80
+  - 15
+  - 0
+  - 20
+  - 10
+  - 5
+  - 10
+  - 0
+  - 0
+  - 1
+  - 1
+  description: 
+  model: {fileID: 1165574055924583987, guid: dbc13e7643eee1041a8fd4465c15e786, type: 3}
+  miniature: {fileID: 21300000, guid: bb4d59dc39c70e045a8476640d6580e1, type: 3}
+  closeUpImage: {fileID: 21300000, guid: eb8163ddfc38d0d4abd076b8caa3205d, type: 3}
+  stepSounds:
+  - {fileID: 8300000, guid: ddda8f0a0c7a5ca44bb45a4801eca2c3, type: 3}
+  - {fileID: 8300000, guid: 08cb436efa1674843923c874a2d6c7f8, type: 3}
+  - {fileID: 8300000, guid: c1868fcd96eca7f46b725c4378d2a61d, type: 3}
+  skillList:
+  - skill: {fileID: 11400000, guid: 48a7083decf6256448b07d694bdf1a98, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: e9d3493e71047e147ac881bff3f8126c, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: 1af01348692b52d44b558f2a9c706806, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: 69d9458b4ac1d8b488db2885ed5e9663, type: 2}
+    level: 5
+  - skill: {fileID: 11400000, guid: 643359c2c2763c244b4ad58a449401e6, type: 2}
+    level: 7
+  - skill: {fileID: 11400000, guid: d038f14d0763e2447a7b0e7bc79c4b64, type: 2}
+    level: 9
+  - skill: {fileID: 11400000, guid: abc38a3c0647f194fa93bc7bcfbf189d, type: 2}
+    level: 11
+  equipmentSlots: 000000000000000001000000
+  possibleMorphs: []

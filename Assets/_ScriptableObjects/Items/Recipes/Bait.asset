@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea83de2931ff7734098a8734d6cec152, type: 3}
+  m_Name: Bait
+  m_EditorClassIdentifier: 
+  dropColor: {r: 0.9490196, g: 0, b: 1, a: 1}
+  dropMesh: {fileID: -5294088165016828966, guid: 6e7cc490821d4894b98dbcfccdc9247a,
+    type: 3}
+  autoPickUp: 0
+  name: Bait 1
+  ingredients:
+  - specific: 1
+    type: 0
+    category: 3
+    item: {fileID: 11400000, guid: 23d229d81ec38844da63d2b4035a08c8, type: 2}
+    tier: 0
+    essence: {fileID: 0}
+    amount: 1
+  - specific: 0
+    type: 1
+    category: 0
+    item: {fileID: 0}
+    tier: 0
+    essence: {fileID: 0}
+    amount: 20
+  product:
+    type: 3
+    item: {fileID: 0}
+    tier: 0
+  price: 20

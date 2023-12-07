@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 15_Noctenax
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 50
+  - 80
+  - 45
+  - 65
+  - 45
+  - 75
+  - 60
+  - 50
+  - 5
+  - 0
+  - 10
+  - 0
+  - 0
+  - 5
+  - 0
+  - 0
+  - 1
+  - 1
+  description: 
+  model: {fileID: 9181033989531918957, guid: dcce7de587a27814ea93cd5478252049, type: 3}
+  miniature: {fileID: 0}
+  closeUpImage: {fileID: 0}
+  stepSounds:
+  - {fileID: 8300000, guid: ddda8f0a0c7a5ca44bb45a4801eca2c3, type: 3}
+  - {fileID: 8300000, guid: 08cb436efa1674843923c874a2d6c7f8, type: 3}
+  - {fileID: 8300000, guid: c1868fcd96eca7f46b725c4378d2a61d, type: 3}
+  skillList: []
+  equipmentSlots: 
+  possibleMorphs: []

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3be01f0b5e68c234aa355a502f0f3322
+timeCreated: 1510271080
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _MyBaseSkill: {fileID: 11400000, guid: ddc6eb2baa8104448a5456f4a501c780, type: 2}
+  - _MyStats: {instanceID: 0}
+  - _MyAnimator: {instanceID: 0}
+  - _MyCreatureIA: {instanceID: 0}
+  - _MyMana: {instanceID: 0}
+  - targetCreature: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

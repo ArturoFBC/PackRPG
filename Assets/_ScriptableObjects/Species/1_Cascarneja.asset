@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 1_Cascarneja
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 60
+  - 90
+  - 50
+  - 70
+  - 50
+  - 90
+  - 90
+  - 70
+  - 10
+  - 15
+  - 0
+  - 0
+  - 20
+  - 0
+  - 0
+  - 0
+  - 1
+  - 1
+  description: Since they are hatchlings, Shellrows learn to aim their sharp feathers
+    with the eye of the mind. They will still sometimes cheat peeking under the egg
+    shell.
+  model: {fileID: 9062545871975526255, guid: fde35be2eaf24144a873438a2f8eef8c, type: 3}
+  miniature: {fileID: 21300000, guid: 880f6e69bd1f13c4aa1f0d80fc46b60a, type: 3}
+  closeUpImage: {fileID: 21300000, guid: 1c9793e4203781e4c9d385ce7ce3a3f7, type: 3}
+  stepSounds:
+  - {fileID: 8300000, guid: d3c598914439a5a4f8f1e4ccc1ffb2d1, type: 3}
+  skillList:
+  - skill: {fileID: 11400000, guid: ebb64bc5773881b489e175906c88ebca, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: cf6126080d99f3c458655cc32282145a, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: 174fbbd3a602f5449b4f378df59135bf, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: 38321a52572f0924f9cb8c5d113b67fe, type: 2}
+    level: 10
+  - skill: {fileID: 11400000, guid: ddc6eb2baa8104448a5456f4a501c780, type: 2}
+    level: 6
+  - skill: {fileID: 11400000, guid: bb35923182b8c504fa32127e172f1295, type: 2}
+    level: 8
+  equipmentSlots: 000000000000000001000000
+  possibleMorphs:
+  - morphConditions:
+    - type: 0
+      value: 8
+    morphEssenceCosts:
+    - species: {fileID: 11400000}
+      amount: 50
+    targetSpecies: {fileID: 11400000, guid: f5cc6f801c891fa46b7ce6611888c329, type: 2}

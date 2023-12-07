@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: ChillingScreech
+  m_EditorClassIdentifier: 
+  description: Damages and freezes all enemies in a cone.
+  icon: {fileID: 21300000, guid: 55173b2e8eaf0d14ab94bd8d712163f0, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 1167109471793334, guid: 9f146540114ffe142b47027e23384da2, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 3
+  useRange: 8
+  effectRange: 8
+  damage: 40
+  criticalChance: 0.07
+  criticalDamage: 0
+  damageType: 5
+  damageClass: 2
+  lifeSteal: 0
+  cooldown: 8
+  StatModifiersForTarget: []
+  StatusEffects:
+  - target: 0
+    duration: 4
+    status: 1
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 1
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 0.5
+  hitInstant: 0.2
+  creationsDuration: 0
+  manaCost: 30
+  castingSound: {fileID: 0}

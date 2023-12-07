@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35887d19ae248a145ae5b4e957a73ab6, type: 3}
+  m_Name: Desert 1
+  m_EditorClassIdentifier: 
+  scene:
+    sceneAsset: {fileID: 102900000, guid: 7fa2c2e458b36484380e55ea6b61cd74, type: 3}
+    scenePath: Assets/Levels/Desert/Desert.unity
+  areaLevel: 10
+  species:
+  - species: {fileID: 11400000, guid: 596d845371621e54780239a5747445c5, type: 2}
+    spawnRate: 0.5
+  - species: {fileID: 11400000, guid: 263888dbcbf94194394c4a3686c558b0, type: 2}
+    spawnRate: 0.15
+  - species: {fileID: 11400000, guid: 7e03982100b6db34ea78e24b8ad05988, type: 2}
+    spawnRate: 0.5
+  items: []
+  startingPosition: {x: 0, y: 0, z: 0}
+  exitToNextAreaPosition: {x: 170, y: 17, z: 80}
+  nextArea: {fileID: 11400000, guid: 8d87f6205a4ce08448d0ca98a327a1f7, type: 2}

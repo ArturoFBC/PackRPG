@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca475a112dbfc54287ed195a2b059e3, type: 3}
+  m_Name: AngryAwakening
+  m_EditorClassIdentifier: 
+  description: Receive a damage bonus for a few seconds after awakening from a KO.
+  icon: {fileID: 21300000, guid: 4b736b5359dcfb0419c28203829cd65c, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 0}
+  targetVFX: {fileID: 0}
+  targetType: 0
+  useRange: 0
+  effectRange: 0
+  damage: 0
+  criticalChance: 0
+  criticalDamage: 0
+  damageType: 0
+  damageClass: 0
+  lifeSteal: 0
+  cooldown: 0
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition:
+  - condition:
+      type: 6
+      floatValue: 0
+    modifier:
+      target: 2
+      duration: 5
+      skillRefference: {fileID: 11400000}
+      stat: 1
+      value: 0.3
+      timed: 1
+      timeRemaining: 0
+      stacks: 1
+      maxStacks: 1
+      icon: {fileID: 21300000, guid: 777114f70ea49824c82bddba267a846a, type: 3}
+      skillCondition:
+        type: 0
+        floatValue: 0
+        tagValue: 0
+      targetCondition:
+        type: 0
+        floatValue: 0
+  impactSound: {fileID: 0}
+  tags: 
+  impelementation: 0

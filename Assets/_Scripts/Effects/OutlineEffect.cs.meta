@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43389ba57bf2c68449fce2426112aee8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - DrawAsSolidColor: {fileID: -6465566751694194690, guid: e3b2cbb521284b34f96b54be91c4fd85,
+      type: 3}
+  - outline: {fileID: -6465566751694194690, guid: cc8dc2aee961c1349a5586097080da73,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

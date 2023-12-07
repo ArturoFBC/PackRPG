@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: Bite
+  m_EditorClassIdentifier: 
+  description: Damages a single target at melee range, healing user for half o the
+    damage dealt.
+  icon: {fileID: 21300000, guid: b20bc966495a6374290db8332ab0909f, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 1251677587072500, guid: e4057e42f2ce06d4292fb8f16bf8c77d, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 0
+  useRange: 4
+  effectRange: 0
+  damage: 30
+  criticalChance: 0.05
+  criticalDamage: 0
+  damageType: 1
+  damageClass: 1
+  lifeSteal: 0
+  cooldown: 0
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 4
+  category: 0
+  animationTrigger: ClawAttack
+  executionDuration: 2.5
+  hitInstant: 0.2
+  creationsDuration: 0
+  manaCost: 0
+  castingSound: {fileID: 0}

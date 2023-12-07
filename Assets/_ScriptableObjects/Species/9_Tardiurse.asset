@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 9_Tardiurse
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 100
+  - 80
+  - 110
+  - 100
+  - 120
+  - 60
+  - 110
+  - 120
+  - 10
+  - 10
+  - 10
+  - 20
+  - 20
+  - 15
+  - 0
+  - 0
+  - 1
+  - 1
+  description: 
+  model: {fileID: 6558671768586838296, guid: 58c8a10988fd1eb45b5a191f2eaad6a7, type: 3}
+  miniature: {fileID: 21300000, guid: 3eddf44f557c68d4e9c5fc4f1065bc9f, type: 3}
+  closeUpImage: {fileID: 21300000, guid: 60b4381a4da313c4881455c758efc002, type: 3}
+  stepSounds: []
+  skillList: []
+  equipmentSlots: 000000000000000001000000
+  possibleMorphs: []

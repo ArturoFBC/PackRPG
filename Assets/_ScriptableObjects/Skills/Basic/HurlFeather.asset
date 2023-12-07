@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: HurlFeather
+  m_EditorClassIdentifier: 
+  description: Throws a feather that bounces off the first enemy hit to another nearby
+    target, dealing 50% damage.
+  icon: {fileID: 21300000, guid: 0226fbc57a379144aa9ba9638ccee815, type: 3}
+  projectile: {fileID: 1522143484518450, guid: a1b93c07f21ebde428566471578cfd41, type: 3}
+  useVFX: {fileID: 0}
+  targetVFX: {fileID: 0}
+  targetType: 0
+  useRange: 10
+  effectRange: 0
+  damage: 15
+  criticalChance: 0.1
+  criticalDamage: 0
+  damageType: 1
+  damageClass: 1
+  lifeSteal: 0
+  cooldown: 0
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 5
+  category: 0
+  animationTrigger: ClawAttack
+  executionDuration: 2
+  hitInstant: 0.3
+  creationsDuration: 0
+  manaCost: 0
+  castingSound: {fileID: 0}

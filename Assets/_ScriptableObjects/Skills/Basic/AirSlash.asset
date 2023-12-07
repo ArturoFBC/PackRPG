@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: AirSlash
+  m_EditorClassIdentifier: 
+  description: Sends a wave of air that can cut and has a high critical chance.
+  icon: {fileID: 21300000, guid: 91b031d97b2169e4cafdfd995e2ff451, type: 3}
+  projectile: {fileID: 2891961465848036741, guid: 74fa9218d5da5694287bfd75bdb47585,
+    type: 3}
+  useVFX: {fileID: 5738337680079279616, guid: ffcbbbb2eff7c60449efac6cae2aa86d, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 0
+  useRange: 7
+  effectRange: 0
+  damage: 17
+  criticalChance: 0.15
+  criticalDamage: 0
+  damageType: 2
+  damageClass: 2
+  lifeSteal: 0
+  cooldown: 0
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 5
+  category: 0
+  animationTrigger: ClawAttack
+  executionDuration: 2
+  hitInstant: 0.1
+  creationsDuration: 0
+  manaCost: 0
+  castingSound: {fileID: 0}

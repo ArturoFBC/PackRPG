@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: Stomp
+  m_EditorClassIdentifier: 
+  description: Hit the ground sending a shockwave that damages and shocks enemies.
+  icon: {fileID: 21300000, guid: d787b899ef529a14cbaf15fa609afd47, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 1487492452973440, guid: 3c48e85bb64f8b044b7c2e5f7a11e7d9, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 2
+  useRange: 0
+  effectRange: 4
+  damage: 60
+  criticalChance: 0.05
+  criticalDamage: 0
+  damageType: 3
+  damageClass: 1
+  lifeSteal: 0
+  cooldown: 5
+  StatModifiersForTarget: []
+  StatusEffects:
+  - target: 0
+    duration: 3
+    status: 2
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 0
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 0.5
+  hitInstant: 0.1
+  creationsDuration: 0
+  manaCost: 40
+  castingSound: {fileID: 0}

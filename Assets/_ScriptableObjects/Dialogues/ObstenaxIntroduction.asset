@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1038896f910754f9d0553a29a542c7, type: 3}
+  m_Name: ObstenaxIntroduction
+  m_EditorClassIdentifier: Assembly-CSharp:Dialog:Dialog
+  speakers:
+  - speakerName: Capuchervo
+    speakerAvatar: {fileID: 21300000, guid: 712b5009ea6f86e46baea5c61786d0b3, type: 3}
+  - speakerName: Obstenax
+    speakerAvatar: {fileID: 21300000, guid: 62352c4a1880c7a49a8d8a8c554d4515, type: 3}
+  speeches:
+  - speakerIndex: 1
+    speech: Hi, I am the great obstenax, look at me.
+  - speakerIndex: 0
+    speech: You have impresive pecs
+  - speakerIndex: 1
+    speech: Ha ha ha, gaze upon my pecs and dispair.

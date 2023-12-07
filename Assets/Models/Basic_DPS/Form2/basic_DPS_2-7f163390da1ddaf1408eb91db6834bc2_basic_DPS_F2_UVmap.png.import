@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://drnjgvl0mtd0c"
+path.s3tc="res://.godot/imported/basic_DPS_2-7f163390da1ddaf1408eb91db6834bc2_basic_DPS_F2_UVmap.png-444bda0506d77ff227947d9b004e9ba8.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://Pack/Assets/Models/Basic_DPS/Form2/basic_DPS_2-7f163390da1ddaf1408eb91db6834bc2_basic_DPS_F2_UVmap.png"
+dest_files=["res://.godot/imported/basic_DPS_2-7f163390da1ddaf1408eb91db6834bc2_basic_DPS_F2_UVmap.png-444bda0506d77ff227947d9b004e9ba8.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

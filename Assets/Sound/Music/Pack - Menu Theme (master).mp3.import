@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bt7gtjnnc85eu"
+path="res://.godot/imported/Pack - Menu Theme (master).mp3-fe66a14ce6e26809645193647cb80dd1.mp3str"
+
+[deps]
+
+source_file="res://Pack/Assets/Sound/Music/Pack - Menu Theme (master).mp3"
+dest_files=["res://.godot/imported/Pack - Menu Theme (master).mp3-fe66a14ce6e26809645193647cb80dd1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

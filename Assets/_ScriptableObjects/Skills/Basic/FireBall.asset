@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: FireBall
+  m_EditorClassIdentifier: 
+  description: Creates a ball of fire and hurs it to the target, briefly burning it.
+  icon: {fileID: 21300000, guid: 34c0671bd471c9b448f533da29341f9a, type: 3}
+  projectile: {fileID: 1444850675064454, guid: a19e30600b96c3a44aeaee9e42aabca1, type: 3}
+  useVisualEffect: {fileID: 0}
+  targetType: 0
+  useRange: 10
+  effectRange: 0
+  damage: 30
+  criticalChance: 0.05
+  criticalDamage: 0
+  damageType: 4
+  damageClass: 2
+  lifeSteal: 0
+  cooldown: 0
+  StatModifiersForTarget: []
+  StatusEffects:
+  - target: 0
+    duration: 3
+    status: 0
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 0}
+  tags: 
+  skillImplementation: 5
+  category: 0
+  animationTrigger: ClawAttack
+  executionDuration: 3
+  hitInstant: 0
+  creationsDuration: 0
+  manaCost: 0
+  castingSound: {fileID: 0}

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 4_Tachyn
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 80
+  - 60
+  - 80
+  - 40
+  - 80
+  - 60
+  - 60
+  - 70
+  - 5
+  - 10
+  - 15
+  - 0
+  - 5
+  - 15
+  - 0
+  - 0
+  - 1
+  - 1
+  description: They are laid back and their parents barely look after them. There
+    are not many dangers for these though packlings
+  model: {fileID: 6661404705701959202, guid: b732a86e1b47c824b87a7a490b64feac, type: 3}
+  miniature: {fileID: 21300000, guid: 04d21d31143d8b84c9c9db56855aff79, type: 3}
+  closeUpImage: {fileID: 21300000, guid: 7a4364dc1efecbc4ab2096bf6fbb9c22, type: 3}
+  stepSounds:
+  - {fileID: 8300000, guid: ddda8f0a0c7a5ca44bb45a4801eca2c3, type: 3}
+  - {fileID: 8300000, guid: 08cb436efa1674843923c874a2d6c7f8, type: 3}
+  - {fileID: 8300000, guid: c1868fcd96eca7f46b725c4378d2a61d, type: 3}
+  skillList:
+  - skill: {fileID: 11400000, guid: e9d3493e71047e147ac881bff3f8126c, type: 2}
+    level: 0
+  equipmentSlots: 000000000000000001000000
+  possibleMorphs:
+  - morphConditions:
+    - type: 0
+      value: 12
+    morphEssenceCosts:
+    - species: {fileID: 11400000}
+      amount: 20
+    targetSpecies: {fileID: 11400000, guid: faa37471321ea4b44bf902c2993bce1a, type: 2}

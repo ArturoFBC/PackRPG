@@ -1,0 +1,244 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228c8d9e89dd6074990f4e3b651fe974, type: 3}
+  m_Name: EditorCreatureStorage
+  m_EditorClassIdentifier: Assembly-CSharp::CreatureStorageEditor
+  activePack:
+  - species: {fileID: 11400000, guid: 596d845371621e54780239a5747445c5, type: 2}
+    name: Obstenax
+    exp: 4000.884
+    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+    genotype:
+      stats:
+      - 12
+      - 10
+      - 5
+      - 7
+      - 14
+      - 2
+      - 4
+      - 8
+    phenotype:
+      stats:
+      - 7
+      - 3
+      - 2
+      - 4
+      - 15
+      - 27
+      - 4
+      - 6
+    passive_1: {fileID: 11400000, guid: c463bbb09c87ab24eb973fea5d2bb178, type: 2}
+    passive_2: {fileID: 0}
+    passive_3: {fileID: 0}
+    basicAttack: {fileID: 11400000, guid: e9d3493e71047e147ac881bff3f8126c, type: 2}
+    cooldownAttack_1: {fileID: 11400000, guid: 643359c2c2763c244b4ad58a449401e6, type: 2}
+    cooldownAttack_2: {fileID: 11400000, guid: d0adf78777af30147a184181b4440a9e, type: 2}
+    ultimateAttack: {fileID: 0}
+    skillsToLearn:
+    - {fileID: 11400000, guid: 69d9458b4ac1d8b488db2885ed5e9663, type: 2}
+    equipmentSlots:
+    - type: 1
+      empty: 0
+    - type: 0
+      empty: 0
+    - type: 0
+      empty: 0
+  - species: {fileID: 11400000, guid: 59390ef64cd35f741813dec5310b3801, type: 2}
+    name: Caterpup
+    exp: 128.8841
+    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+    genotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    phenotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 10
+      - 0
+      - 0
+      - 0
+    passive_1: {fileID: 11400000, guid: 4f657791c1908574db2e16141745d0da, type: 2}
+    passive_2: {fileID: 0}
+    passive_3: {fileID: 0}
+    basicAttack: {fileID: 11400000, guid: bc16393b8207dc146a5be8af6b7e7a6c, type: 2}
+    cooldownAttack_1: {fileID: 11400000, guid: f4c39e6bfb184fc4898a57116a4bbb57, type: 2}
+    cooldownAttack_2: {fileID: 11400000, guid: b90951602c3770448b0563a33c00fc53, type: 2}
+    ultimateAttack: {fileID: 0}
+    skillsToLearn:
+    - {fileID: 11400000, guid: 1b7084a4ba4b7c64ea8dae293557aace, type: 2}
+    - {fileID: 11400000, guid: 1b7084a4ba4b7c64ea8dae293557aace, type: 2}
+    equipmentSlots:
+    - type: 1
+      empty: 0
+    - type: 0
+      empty: 0
+    - type: 0
+      empty: 0
+  - species: {fileID: 11400000, guid: 43b35bb2969b68b49900591ad22dd64d, type: 2}
+    name: Shelrow
+    exp: 128.8841
+    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+    genotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    phenotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 10
+      - 0
+      - 0
+      - 0
+    passive_1: {fileID: 11400000, guid: cf6126080d99f3c458655cc32282145a, type: 2}
+    passive_2: {fileID: 0}
+    passive_3: {fileID: 0}
+    basicAttack: {fileID: 11400000, guid: ebb64bc5773881b489e175906c88ebca, type: 2}
+    cooldownAttack_1: {fileID: 11400000, guid: ddc6eb2baa8104448a5456f4a501c780, type: 2}
+    cooldownAttack_2: {fileID: 11400000, guid: d8cacd067bc97a14fa4c865260751471, type: 2}
+    ultimateAttack: {fileID: 0}
+    skillsToLearn:
+    - {fileID: 11400000, guid: ddc6eb2baa8104448a5456f4a501c780, type: 2}
+    - {fileID: 11400000, guid: ddc6eb2baa8104448a5456f4a501c780, type: 2}
+    equipmentSlots:
+    - type: 1
+      empty: 0
+    - type: 0
+      empty: 0
+    - type: 0
+      empty: 0
+  storedCreatures:
+  - species: {fileID: 11400000, guid: 68cd1f654faac8d43a715e6065ad426a, type: 2}
+    name: Hola
+    exp: 1000
+    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+    genotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    phenotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    passive_1: {fileID: 11400000, guid: 1b64571f36005774291963759dfc3797, type: 2}
+    passive_2: {fileID: 0}
+    passive_3: {fileID: 0}
+    basicAttack: {fileID: 11400000, guid: bc16393b8207dc146a5be8af6b7e7a6c, type: 2}
+    cooldownAttack_1: {fileID: 11400000, guid: 1af01348692b52d44b558f2a9c706806, type: 2}
+    cooldownAttack_2: {fileID: 11400000, guid: 643359c2c2763c244b4ad58a449401e6, type: 2}
+    ultimateAttack: {fileID: 0}
+    skillsToLearn: []
+    equipmentSlots: []
+  - species: {fileID: 11400000, guid: 59390ef64cd35f741813dec5310b3801, type: 2}
+    name: oooh
+    exp: 1022.29
+    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+    genotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    phenotype:
+      stats:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    passive_1: {fileID: 0}
+    passive_2: {fileID: 0}
+    passive_3: {fileID: 0}
+    basicAttack: {fileID: 11400000, guid: e9d3493e71047e147ac881bff3f8126c, type: 2}
+    cooldownAttack_1: {fileID: 0}
+    cooldownAttack_2: {fileID: 0}
+    ultimateAttack: {fileID: 0}
+    skillsToLearn: []
+    equipmentSlots: []

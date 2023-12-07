@@ -1,0 +1,10 @@
+[1103/223110.560:ERROR:settings.cc(263)] Settings version is not 1
+[1112/000950.636:ERROR:settings.cc(263)] Settings version is not 1
+[1219/190252.844:ERROR:settings.cc(263)] Settings version is not 1
+[0416/203255.069:ERROR:settings.cc(263)] Settings version is not 1
+[0605/192435.810:ERROR:settings.cc(324)] Settings version is not 1
+[0626/234047.789:ERROR:settings.cc(324)] Settings version is not 1
+[0813/215702.116:ERROR:settings.cc(324)] Settings version is not 1
+[1105/222252.964:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1113/163925.688:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0207/201816.583:ERROR:crash_report_database_win.cc(428)] unexpected header

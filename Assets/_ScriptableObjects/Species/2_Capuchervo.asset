@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 2_Capuchervo
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 70
+  - 110
+  - 60
+  - 85
+  - 60
+  - 110
+  - 105
+  - 75
+  - 12
+  - 18
+  - 0
+  - 0
+  - 25
+  - 0
+  - 0
+  - 0
+  - 1
+  - 1
+  description: 
+  model: {fileID: 1233425336631418193, guid: a90cbd1b9f9b1ad4b9d488eeada94bbc, type: 3}
+  miniature: {fileID: 21300000, guid: afd395e70f7c54741afaebcb73d75542, type: 3}
+  closeUpImage: {fileID: 21300000, guid: 87477793c3b7e5149a4d34cf6241539a, type: 3}
+  stepSounds:
+  - {fileID: 8300000, guid: b46f9b7b61127fe4f8035faf24d4eb90, type: 3}
+  skillList:
+  - skill: {fileID: 11400000, guid: ebb64bc5773881b489e175906c88ebca, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: 174fbbd3a602f5449b4f378df59135bf, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: cf6126080d99f3c458655cc32282145a, type: 2}
+    level: 0
+  - skill: {fileID: 11400000, guid: ddc6eb2baa8104448a5456f4a501c780, type: 2}
+    level: 6
+  - skill: {fileID: 11400000, guid: bb35923182b8c504fa32127e172f1295, type: 2}
+    level: 8
+  - skill: {fileID: 11400000, guid: 38321a52572f0924f9cb8c5d113b67fe, type: 2}
+    level: 10
+  equipmentSlots: 000000000000000001000000
+  possibleMorphs:
+  - morphConditions:
+    - type: 0
+      value: 10
+    morphEssenceCosts: []
+    targetSpecies: {fileID: 11400000, guid: 6a788f64a74d92c499923aa9cad2dab3, type: 2}
