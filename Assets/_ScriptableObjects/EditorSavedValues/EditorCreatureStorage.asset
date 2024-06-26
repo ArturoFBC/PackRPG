@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EditorCreatureStorage
   m_EditorClassIdentifier: Assembly-CSharp::CreatureStorageEditor
   activePack:
-  - species: {fileID: 11400000, guid: 596d845371621e54780239a5747445c5, type: 2}
+  - species: {fileID: 11400000, guid: bdd3d1d2ea9601d4da0d1f960f605d4d, type: 2}
     name: Obstenax
     exp: 4000.884
     secondaryColor: {r: 0, g: 0, b: 0, a: 0}

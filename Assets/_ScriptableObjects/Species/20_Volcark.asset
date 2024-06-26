@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 20_Volcark
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 110
+  - 120
+  - 120
+  - 90
+  - 100
+  - 100
+  - 60
+  - 100
+  - 15
+  - 15
+  - 0
+  - 20
+  - 0
+  - 0
+  - 10
+  - 10
+  - 1
+  - 1
+  description: 
+  model: {fileID: 1804710526924931926, guid: d3f048a438634644fbfcf576e16378f3, type: 3}
+  miniature: {fileID: 0}
+  closeUpImage: {fileID: 0}
+  stepSounds: []
+  skillList: []
+  equipmentSlots: 
+  possibleMorphs: []
