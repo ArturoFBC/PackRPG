@@ -67,13 +67,10 @@ public class TutorialManager : MonoBehaviour
     {
         bool allDead = true;
 
-        print(allDead);
         foreach (CreatureHitPoints creatureHitPoints in enemiesToDefeat)
         {
-            print("BBB");
             if (creatureHitPoints != null && creatureHitPoints.currentHP >= 0)
             {
-                print("AAAA");
                 allDead = false;
                 break;
             }

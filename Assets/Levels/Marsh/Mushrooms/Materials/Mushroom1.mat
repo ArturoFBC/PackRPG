@@ -110,9 +110,9 @@ Material:
     - _ReflectionStrength: 0
     - _Reflectiveness: 0
     - _RimPower: 1
-    - _ShadowHardness: 0.517
+    - _ShadowHardness: 0.898
     - _ShadowIntensitiy: 0
-    - _ShadowPoint: 1.52
+    - _ShadowPoint: 1.07
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularPoint: 0
