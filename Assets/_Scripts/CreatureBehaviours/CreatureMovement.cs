@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,19 +11,27 @@ public class CreatureMovement : MonoBehaviour {
     private NavMeshAgent _MyNavigationAgent;
     [SerializeField]
     private Animator _MyAnimator;
+    [SerializeField]
+    private float _TurnRate = 360;
+
+    GameObject _Target;
+    Vector3 _Destination;
+    MovementTarget _TargetType = MovementTarget.POSITION;
+
+    Coroutine rotationCoroutine;
+
+    // How close we need to get to the target
+    float _Range;
 
     public delegate void MoveStart(Vector3 target);
     public event MoveStart MoveStartEvent;
     public delegate void MoveEnd();
     public event MoveEnd MoveEndEvent;
 
-    GameObject _Target;
-    Vector3 _Destination;
-    MovementTarget _TargetType = MovementTarget.POSITION;
 
-    float _Range;
 
-    public bool _WaitingForPath;
+    public bool _WaitingForPath
+    { get; private set; }
 
     bool _moving => _MyNavigationAgent.hasPath;
 
@@ -75,13 +84,46 @@ public class CreatureMovement : MonoBehaviour {
         }
     }
 
-    public void LookAt( Vector3 position )
+    public void LookAtInstant( Vector3 position )
     {
+        if (rotationCoroutine != null)
+            StopCoroutine(rotationCoroutine);
+
         _MyNavigationAgent.updateRotation = false;
         Vector3 targetPostition = new Vector3(position.x,
                                        this.transform.position.y,
                                        position.z);
         this.transform.LookAt(targetPostition);
+    }
+
+    public void LookAtOverTime(Vector3 targetPosition)
+    {
+        if (rotationCoroutine != null)
+            StopCoroutine(rotationCoroutine);
+
+        _MyNavigationAgent.updateRotation = false;
+
+        StartCoroutine(LookAtOverTimeCoroutine(targetPosition));
+    }
+
+    private IEnumerator LookAtOverTimeCoroutine(Vector3 targetPosition)
+    {
+        Quaternion endRotation = Quaternion.LookRotation(targetPosition - transform.position, transform.up);
+
+        float angleDifference = Quaternion.Angle(transform.rotation, endRotation);
+
+        OnMovementStart(targetPosition);
+
+        while ( angleDifference > 1f )
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, endRotation, _TurnRate * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+            angleDifference = Quaternion.Angle(transform.rotation, endRotation);
+        }
+
+        OnMovementEnd();
+
+        _MyNavigationAgent.updateRotation = true;
     }
 
     public void MoveTo(Vector3 seTdestination, float setRange = 1f, bool movingTarget = false)

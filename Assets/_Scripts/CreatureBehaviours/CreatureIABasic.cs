@@ -282,19 +282,19 @@ public class CreatureIABasic : MonoBehaviour
                 case TargetType.GROUND:
                     if (_TargetType == MovementTarget.POSITION)
                     {
-                        _MyPlayerMovement.LookAt(_TargetPosition);
+                        _MyPlayerMovement.LookAtOverTime(_TargetPosition);
                         _CurrentSkill.StartExecution(_TargetPosition);
                     }
                     else
                     {
                         if (_CurrentSkill == _MySkillManager.GetBasicSkill())
                         {
-                            _MyPlayerMovement.LookAt(_BasicAttackTarget.transform.position);
+                            _MyPlayerMovement.LookAtOverTime(_BasicAttackTarget.transform.position);
                             _CurrentSkill.StartExecution(_BasicAttackTarget.transform.position);
                         }
                         else
                         {
-                            _MyPlayerMovement.LookAt(_SkillTargetCreature.transform.position);
+                            _MyPlayerMovement.LookAtOverTime(_SkillTargetCreature.transform.position);
                             _CurrentSkill.StartExecution(_SkillTargetCreature.transform.position);
                         }
                     }
@@ -309,12 +309,12 @@ public class CreatureIABasic : MonoBehaviour
                     if (_CurrentSkill == _MySkillManager.GetBasicSkill())
                     {
                         ;
-                        _MyPlayerMovement.LookAt(_BasicAttackTarget.transform.position);
+                        _MyPlayerMovement.LookAtOverTime(_BasicAttackTarget.transform.position);
                         _CurrentSkill.StartExecution(_BasicAttackTarget);
                     }
                     else
                     {
-                        _MyPlayerMovement.LookAt(_SkillTargetCreature.transform.position);
+                        _MyPlayerMovement.LookAtOverTime(_SkillTargetCreature.transform.position);
                         _CurrentSkill.StartExecution(_SkillTargetCreature);
                     }
                     break;
