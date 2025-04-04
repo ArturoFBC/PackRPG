@@ -13,28 +13,52 @@ MonoBehaviour:
   m_Name: New Dialogue 1
   m_EditorClassIdentifier: 
   saveSpeeches:
-  - text: asdfad
-    childrenIDs: 0100000002000000
+  - text: sfhfhg
+    childrenIDs: 02000000
     editorPosition:
       serializedVersion: 2
-      x: 46
-      y: 24
+      x: 23
+      y: 42
+      width: 200
+      height: 90
+  - text: hey
+    childrenIDs: 010000000300000005000000
+    editorPosition:
+      serializedVersion: 2
+      x: 321
+      y: 53
       width: 200
       height: 70
-  - text: fjhgjf
+  - text: 
     childrenIDs: 
     editorPosition:
       serializedVersion: 2
-      x: 350
-      y: 132
+      x: 617
+      y: 32
       width: 200
       height: 70
-  - text: AS
+  - text: 
     childrenIDs: 
     editorPosition:
       serializedVersion: 2
-      x: 353
-      y: 15
+      x: 616
+      y: 102
       width: 200
       height: 70
-  saveSpeechIDs: 000000000100000002000000
+  - text: 
+    childrenIDs: 
+    editorPosition:
+      serializedVersion: 2
+      x: 900
+      y: 105
+      width: 200
+      height: 70
+  - text: 
+    childrenIDs: 04000000
+    editorPosition:
+      serializedVersion: 2
+      x: 615
+      y: 178
+      width: 200
+      height: 70
+  saveSpeechIDs: 000000000200000001000000030000000400000005000000

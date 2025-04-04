@@ -48,7 +48,7 @@ namespace NewDialogue
             if (saveSpeeches != null && saveSpeeches.Count > 0)
             {
                 for (int i = 0; i < saveSpeeches.Count; i++)
-                    speeches.Add(i, saveSpeeches[i]);
+                    speeches.Add(saveSpeechIDs[i], saveSpeeches[i]);
             }
         }
 
@@ -88,6 +88,31 @@ namespace NewDialogue
             SaveSpeeches();
         }
 
+        public void DeleteSpeech(Speech speech)
+        {
+            int deletedID = ReverseDictionaryLookUp(speech);
+
+            speeches.Remove(deletedID);
+            foreach (KeyValuePair<int, Speech> pair in speeches)
+            {
+                if (pair.Value.childrenIDs.Contains(deletedID))
+                    pair.Value.childrenIDs.Remove(deletedID);
+            }
+
+            SaveSpeeches();
+        }
+
+        public int ReverseDictionaryLookUp(Speech speech)
+        {
+            foreach (KeyValuePair<int, Speech> pair in speeches)
+            {
+                if (pair.Value == speech)
+                    return pair.Key;
+            }
+
+            return 0;
+        }
+
         public int GetFreeID()
         {
             for (int i = 0; i < speeches.Count; i++)
@@ -96,6 +121,32 @@ namespace NewDialogue
                     return i;
             }
             return speeches.Count;
+        }
+
+        public void ReparentSpeech(Speech parentSpeech, Speech childSpeech)
+        {
+            // Do not link to itself
+            if (parentSpeech == childSpeech)
+                return;
+
+            int childID = ReverseDictionaryLookUp(childSpeech);
+
+            // Do not link if already linked
+            if (parentSpeech != null && parentSpeech.childrenIDs.Contains(childID))
+                return;
+
+            // Remove all links
+            foreach (KeyValuePair<int, Speech> pair in speeches)
+            {
+                if (pair.Value.childrenIDs.Contains(childID))
+                    pair.Value.childrenIDs.Remove(childID);
+            }
+
+            // Relink
+            if (parentSpeech != null)
+                parentSpeech.childrenIDs.Add(childID);
+
+            SaveSpeeches();
         }
 #endif
     }
