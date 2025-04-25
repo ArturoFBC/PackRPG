@@ -13,52 +13,67 @@ MonoBehaviour:
   m_Name: New Dialogue 1
   m_EditorClassIdentifier: 
   saveSpeeches:
-  - text: sfhfhg
+  - text: Hello, what are you doing in theese woods?
     childrenIDs: 02000000
+    speakerID: 0
     editorPosition:
       serializedVersion: 2
-      x: 23
-      y: 42
-      width: 200
+      x: 16
+      y: 116
+      width: 250
       height: 90
-  - text: hey
-    childrenIDs: 010000000300000005000000
+  - text: Hello there, do you want a potato?
+    childrenIDs: 010000000400000003000000
+    speakerID: 1
     editorPosition:
       serializedVersion: 2
-      x: 321
-      y: 53
-      width: 200
-      height: 70
-  - text: 
+      x: 303
+      y: 118
+      width: 250
+      height: 90
+  - text: I have to go.
+    childrenIDs: 06000000
+    speakerID: 0
+    editorPosition:
+      serializedVersion: 2
+      x: 618
+      y: 283
+      width: 250
+      height: 90
+  - text: Keep it, chump
+    childrenIDs: 05000000
+    speakerID: 0
+    editorPosition:
+      serializedVersion: 2
+      x: 624
+      y: 15
+      width: 250
+      height: 90
+  - text: I am very hungry thank you
     childrenIDs: 
+    speakerID: 0
     editorPosition:
       serializedVersion: 2
-      x: 617
-      y: 32
-      width: 200
-      height: 70
-  - text: 
+      x: 621
+      y: 153
+      width: 250
+      height: 90
+  - text: Well, I love you too
     childrenIDs: 
+    speakerID: 1
     editorPosition:
       serializedVersion: 2
-      x: 616
-      y: 102
-      width: 200
-      height: 70
-  - text: 
+      x: 916
+      y: 17
+      width: 250
+      height: 90
+  - text: 'Well, i never thought that they could '
     childrenIDs: 
+    speakerID: 1
     editorPosition:
       serializedVersion: 2
-      x: 900
-      y: 105
-      width: 200
-      height: 70
-  - text: 
-    childrenIDs: 04000000
-    editorPosition:
-      serializedVersion: 2
-      x: 615
-      y: 178
-      width: 200
-      height: 70
-  saveSpeechIDs: 000000000200000001000000030000000400000005000000
+      x: 919
+      y: 282
+      width: 250
+      height: 90
+  saveSpeechIDs: 00000000020000000100000003000000040000000500000006000000

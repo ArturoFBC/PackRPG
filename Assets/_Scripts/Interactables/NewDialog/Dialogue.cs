@@ -78,12 +78,16 @@ namespace NewDialogue
                 yield return speeches[speechID];
         }
 
-        public void CreateChildOfSpeech(Speech childSpeechRequested)
+        public void CreateChildOfSpeech(Speech parentSpeech)
         {
             int newSpeechID = GetFreeID();
 
-            childSpeechRequested.childrenIDs.Add(newSpeechID);
+            parentSpeech.childrenIDs.Add(newSpeechID);
             speeches.Add(newSpeechID, new Speech());
+
+            Vector2 childPosition = parentSpeech.editorPosition.position + new Vector2(Speech.NEW_SPEECH_OFFSET, 0f);
+            speeches[newSpeechID].editorPosition.position = childPosition;
+            speeches[newSpeechID].speakerID = parentSpeech.speakerID == 0 ? 1 : 0;
 
             SaveSpeeches();
         }

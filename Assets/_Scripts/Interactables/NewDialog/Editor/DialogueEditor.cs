@@ -156,7 +156,17 @@ namespace NewDialogue
 
             EditorGUI.BeginChangeCheck();
 
-            string editingText = EditorGUILayout.TextField(speech.text);
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Speaker:", GUILayout.MaxWidth(60f));
+            int editingID = EditorGUILayout.IntField(speech.speakerID, GUILayout.MaxWidth(30f));
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(currentDialogue, "Edit speech speaker");
+                speech.speakerID = editingID;
+            }
+            GUILayout.EndHorizontal();
+
+            string editingText = EditorGUILayout.TextArea(speech.text);
 
             if (EditorGUI.EndChangeCheck())
             {
