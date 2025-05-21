@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,8 +15,12 @@ namespace Dialogue
         [SerializeField] private Text speechLabel;
         [SerializeField] private Image speakerAvatar;
 
+        [SerializeField] private List<Button> answerButtons;
+        [SerializeField] private Button continueButton;
+
         private Dialogue currentDialogue;
-        private int currentDialogueIndex;
+        private Speech currentSpeech;
+        private List<Speaker> currentSpeakers;
 
         private List<string> remainingSpeech = new List<string>();
 
@@ -29,24 +34,28 @@ namespace Dialogue
             gameObject.SetActive(false);
         }
 
-        public void DisplayDialogue(Dialogue dialogue)
+        public void DisplayDialogue(Dialogue dialogue, List<Speaker> speakers)
         {
             currentDialogue = dialogue;
-            currentDialogueIndex = 0;
+            currentSpeakers = speakers;
 
             gameObject.SetActive(true);
-            StartSpeech(currentDialogue.speeches[currentDialogueIndex]);
+            StartSpeech(dialogue.GetSpeech(0));
         }
 
-        private void StartSpeech(DialogueTurn turn)
+        private void StartSpeech(Speech turn)
         {
-            if (turn.speakerIndex >= currentDialogue.speakers.Count)
-                Debug.LogError("Dialogue error in -" + currentDialogue.name + "- dialogue, speakerIndex in turn " + currentDialogueIndex + " does not exist");
+            currentSpeech = turn;
 
-            Speaker speaker = currentDialogue.speakers[turn.speakerIndex];
+            ConfigureUIForSpeech();
+
+            if (turn.speakerID >= currentSpeakers.Count)
+                Debug.LogError("Dialogue error in -" + currentDialogue.name + "- dialogue, speakerIndex in speech " + currentSpeech.text + " does not exist");
+
+            Speaker speaker = currentSpeakers[turn.speakerID];
             DisplaySpeaker(speaker.speakerAvatar, speaker.speakerName);
 
-            List<string> words = new List<string>(turn.speech.Split(' '));
+            List<string> words = new List<string>(turn.text.Split(' '));
             DisplayText(words);
         }
 
@@ -80,25 +89,72 @@ namespace Dialogue
 
         public void ContinueSpeech()
         {
-            if (remainingSpeech.Count > 0)
-                DisplayText(remainingSpeech);
-            else
+            if (remainingSpeech.Count <= 0)
             {
                 SpeechEndedEvent?.Invoke();
                 ContinueDialogue();
+            }
+            else
+            { 
+                DisplayText(remainingSpeech);
             }
         }
 
         private void ContinueDialogue()
         {
-            currentDialogueIndex++;
-            if (currentDialogueIndex < currentDialogue.speeches.Count)
-                StartSpeech(currentDialogue.speeches[currentDialogueIndex]);
+
+            if (currentSpeech.childrenIDs.Count > 1)
+            {
+                DisplayAnswers();
+            }
+            else if (currentSpeech.childrenIDs.Count == 1)
+            {
+                Debug.Log("Display next speech");
+                currentSpeech = currentDialogue.GetSpeech(currentSpeech.childrenIDs[0]);
+                StartSpeech(currentSpeech);
+            }
             else
             {
                 DialogEndedEvent?.Invoke();
                 gameObject.SetActive(false);
             }
+        }
+
+        private void DisplayAnswers()
+        {
+            int speakerIndex = 0;
+
+            Debug.Log(currentSpeech.text);
+            for (int i = 0; i< currentSpeech.childrenIDs.Count; i++)
+            {
+                Debug.Log("Display answers " + i);
+                Speech answer = currentDialogue.GetSpeech(currentSpeech.childrenIDs[i]);
+                answerButtons[i].GetComponentInChildren<Text>().text = answer.text;
+                answerButtons[i].gameObject.SetActive(true);
+                speakerIndex = answer.speakerID;
+            }
+
+            continueButton.gameObject.SetActive(false);
+            speechLabel.transform.parent.gameObject.SetActive(false);
+
+            Speaker speaker = currentSpeakers[speakerIndex];
+            DisplaySpeaker(speaker.speakerAvatar, speaker.speakerName);
+        }
+
+        public void AnswerSelected(int answerIndex)
+        {
+            Speech answerSpeech = currentDialogue.GetSpeech(currentSpeech.childrenIDs[answerIndex]);
+
+            StartSpeech(answerSpeech);
+        }
+
+        private void ConfigureUIForSpeech()
+        {
+            for (int i = 0; i < answerButtons.Count; i++)
+                answerButtons[i].gameObject.SetActive(false);
+
+            continueButton.gameObject.SetActive(true);
+            speechLabel.transform.parent.gameObject.SetActive(true);
         }
     }
 }

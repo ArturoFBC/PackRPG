@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
-using Dialogue = NewDialogue.Dialogue;
+using Dialogue = Dialogue.Dialogue;
 using Unity.Mathematics;
 using UnityEngine.UI.Extensions;
 
-namespace NewDialogue
+namespace Dialogue
 {
     public class DialogueEditor : EditorWindow
     {

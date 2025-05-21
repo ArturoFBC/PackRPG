@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace NewDialogue
+namespace Dialogue
 {
     [System.Serializable]
     public class Speech

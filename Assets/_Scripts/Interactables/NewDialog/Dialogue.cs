@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace NewDialogue
+namespace Dialogue
 {
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
     public class Dialogue : ScriptableObject
@@ -64,11 +64,6 @@ namespace NewDialogue
         public IEnumerable<Speech> GetSpeeches()
         {
             return speeches.Values;
-        }
-
-        public Speech GetStartingSpeech()
-        {
-            return speeches[0];
         }
 
         public IEnumerable<Speech> GetChildrenOfSpeech(Speech speech)
@@ -153,6 +148,11 @@ namespace NewDialogue
             SaveSpeeches();
         }
 #endif
+
+        internal Speech GetSpeech(int speechIndex)
+        {
+            return speeches[speechIndex];
+        }
     }
 
 }
