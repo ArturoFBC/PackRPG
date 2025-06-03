@@ -19,31 +19,10 @@ public class SelectOrDragIntoSlot<ContentType,SlotType>
         SelectedItem,
     }
 
-    public delegate void ContentSlotted(SlotType slot, ContentType content);
-    public event ContentSlotted ContentSlottedEvent;
-    public event ContentSlotted ContentRemovedFromSlotEvent;
-
     private ContentType selectedContent;
     private SlotType selectedSlot;
     private AssignationState state;
     private GameObject draggingItem;
-
-    /*
-    private void IngredientEventsUnsubscribe()
-    {
-        IngredientSlot.SlotClickedEvent -= SlotClick;
-        IngredientSlot.SlotRightClickedEvent -= SlotRightClick;
-        ScrapableDisplay.ScrapableClickedEvent -= ContentClick;
-
-    }
-
-    private void IngredientEventsSubscribe()
-    {
-        IngredientSlot.SlotClickedEvent -= SlotClick;
-        IngredientSlot.SlotRightClickedEvent -= SlotRightClick;
-        ScrapableDisplay.ScrapableClickedEvent -= ContentClick;
-    }
-    */
 
     /// <summary>
     /// Try to put content into slot

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SaveLoad;
 
-public class PackpediaManager : Singleton<PackpediaManager>
+public class PackpediaManager : Singleton<PackpediaManager>, ISaveable
 {
     public List<Species> _OwnedSpecies = new List<Species>();
 
@@ -13,14 +14,14 @@ public class PackpediaManager : Singleton<PackpediaManager>
 
     public static void Load(PackpediaData data)
     {
-        Reset();
+        Ref.Reset();
 
         Ref._OwnedSpecies = new List<Species>();
         foreach (int speciesIndex in data.ownedSpecies)
             ownedSpecies.Add(ScriptableReferencesHolder.GetSpeciesReference(speciesIndex));
     }
 
-    public static void Reset()
+    public void Reset()
     {
         Ref._OwnedSpecies = new List<Species>();
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GameProgress;
 using TMPro;
 
 public class MapLairMenu : MonoBehaviour
@@ -16,7 +17,7 @@ public class MapLairMenu : MonoBehaviour
             Destroy(child.gameObject);
 
         // Add and configure area buttons
-        foreach ( AreaUnlock areaUnlock in GameProgress.Ref.GetAreaList() )
+        foreach ( AreaUnlock areaUnlock in GameProgressManager.Ref.GetAreaList() )
         {
             GameObject newButtonGameObject = Instantiate(_ButtonPrefab, _ButtonsParent);
             Button newButtonBehaviour = newButtonGameObject.GetComponentInChildren<Button>();

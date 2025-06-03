@@ -2,10 +2,6 @@
 
 public abstract class Slot<ContentType>
 {
-    public delegate void SlotClicked(Slot<ContentType> slot);
-    static public event SlotClicked SlotClickedEvent;
-    static public event SlotClicked SlotRightClickedEvent;
-
     private ContentType myContent;
 
     public abstract bool ValidateContent(ContentType possibleContent);

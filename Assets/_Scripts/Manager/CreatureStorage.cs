@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SaveLoad;
 
-public class CreatureStorage : Singleton<CreatureStorage>
+public class CreatureStorage : Singleton<CreatureStorage>, ISaveable
 {
     public List<Specimen> _ActivePack = new List<Specimen>();
     public List<Specimen> _StoredCreatures = new List<Specimen>();
@@ -52,16 +53,16 @@ public class CreatureStorage : Singleton<CreatureStorage>
 
     public static void Load(CreatureStorageData data)
     {
-        Ref._ActivePack = new List<Specimen>();
+        Ref.Reset();
+
         foreach (SpecimenData specimen in data._ActivePack)
             activePack.Add(new Specimen(specimen));
 
-        Ref._StoredCreatures = new List<Specimen>();
         foreach (SpecimenData specimen in data._StoredCreatures)
             storedCreatures.Add(new Specimen(specimen));
     }
 
-    public static void Reset()
+    public void Reset()
     {
         Ref._ActivePack = new List<Specimen>();
         Ref._StoredCreatures = new List<Specimen>();

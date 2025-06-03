@@ -22,7 +22,7 @@ public struct Product
 [System.Serializable]
 public class BaseRecipe : Droppable
 {
-    [SerializeField] private string name;
+    [SerializeField] private string id;
 
     [SerializeField] private List<Ingredient> ingredients;
 

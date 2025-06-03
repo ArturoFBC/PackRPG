@@ -218,7 +218,7 @@ public abstract class Skill : MonoBehaviour {
         }
         catch (Exception e)
         {
-            print(this.name);
+            print(this.name + " -- " + e.Message);
         }
         return false;
     }

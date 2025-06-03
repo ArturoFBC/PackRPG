@@ -5,16 +5,6 @@ using UnityEngine.AI;
 
 public class RoamingBehabiour : MonoBehaviour
 {
-    private enum RoamingState
-    {
-        STARTING_POSITION,
-        GOING,
-        ROAMING_POSITION,
-        COMING
-    }
-
-    [SerializeField] private RoamingState state = RoamingState.STARTING_POSITION;
-
     [SerializeField] private float waitingCounter;
     [SerializeField] private float waitingTime = 5f;
 

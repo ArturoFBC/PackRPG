@@ -8,7 +8,7 @@ public class Essence : Droppable, IScrapable
 
     private Species species;
 
-    private string name;
+    private string id;
 
     public Species GetSpecies()
     {

@@ -133,6 +133,8 @@ public class CreatureHitPoints : MonoBehaviour {
                     hit.attacker.GetComponent<CreatureHitPoints>().Heal(healInstance);
                 }
 
+                HitReceivedEvent?.Invoke(hit);
+
                 //Hit visual effects
                 Vector3 particlePoint = (hit.attackPosition - transform.position).normalized;
                 particlePoint.y = 1.5f;

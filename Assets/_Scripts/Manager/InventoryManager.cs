@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using SaveLoad;
 
 [System.Serializable]
 public class InventoryEntry
@@ -10,7 +11,7 @@ public class InventoryEntry
     public int amount;
 }
 
-public class InventoryManager : Singleton<InventoryManager>
+public class InventoryManager : Singleton<InventoryManager>, ISaveable
 {
     private int _GeneralEssence;
     public delegate void EssenceAmountChanged(int amount);
@@ -226,7 +227,7 @@ public class InventoryManager : Singleton<InventoryManager>
 
     public static void Load( InventoryManagerData data )
     {
-        Reset();
+        Ref.Reset();
 
         Ref._GeneralEssence = data._GeneralEssence;
 
@@ -243,7 +244,7 @@ public class InventoryManager : Singleton<InventoryManager>
         InventoryChangedEvent?.Invoke();
     }
 
-    public static void Reset()
+    public void Reset()
     {
         Ref._GeneralEssence = 30;
         Ref._SpecificEssences = new EssenceInventory();

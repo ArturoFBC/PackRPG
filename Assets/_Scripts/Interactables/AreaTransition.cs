@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameProgress;
 
 public class AreaTransition : MonoBehaviour
 {
@@ -57,7 +58,7 @@ public class AreaTransition : MonoBehaviour
     private void Activate()
     {
         //Unlock next area
-        GameProgress.Ref.UnlockArea(_AreaUnlocked);
+        GameProgressManager.Ref.UnlockArea(_AreaUnlocked);
 
         //Show next area panel
         InGameGUIManager._Ref.OpenAreaExitPanel(_AreaUnlocked);

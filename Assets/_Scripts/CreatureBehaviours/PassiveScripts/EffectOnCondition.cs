@@ -11,8 +11,6 @@ public class EffectOnCondition : PassiveSkill
 
     bool activateWhenGreater = false;
 
-    bool applied = false;
-
     private void Awake()
     {
         if (_MyCreatureStats == null)

@@ -1,72 +1,74 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameProgress;
+using SaveLoad;
 
-public class DataManager : Singleton<DataManager>
-{
-    private static Area currentArea;
-
-    public static Area _CurrentArea
+    public class DataManager : Singleton<DataManager>
     {
-        get
+        private static Area currentArea;
+
+        public static Area _CurrentArea
         {
-            if ( reference == null )
-                reference = FindObjectOfType<DataManager>();
-            if (currentArea == null)
-                reference.Awake();
+            get
+            {
+                if (reference == null)
+                    reference = FindObjectOfType<DataManager>();
+                if (currentArea == null)
+                    reference.Awake();
 
-            return currentArea;
+                return currentArea;
+            }
+            private set
+            {
+                currentArea = value;
+            }
         }
-        private set
+
+
+        //Development values
+        public Area _DevelopmentArea;
+
+        protected override void InheritedAwake()
         {
-            currentArea = value;
+            DontDestroyOnLoad(gameObject);
+
+            // Development values
+            currentArea = _DevelopmentArea;
         }
-    }
 
-
-    //Development values
-    public Area _DevelopmentArea;
-
-    protected override void InheritedAwake()
-    {
-        DontDestroyOnLoad(gameObject);
-
-        // Development values
-        currentArea = _DevelopmentArea;
-    }
-
-    public static void SetArea( Area area )
-    {
-        currentArea = area;
-    }
-
-    public static void SaveData()
-    {
-        SaveLoadManager.Save();
-    }
-
-    public static void LoadData()
-    {
-        SaveData data = SaveLoadManager.GetSave();
-
-        if (data != null)
+        public static void SetArea(Area area)
         {
-            CreatureStorage.Load(data.creatureStorageData);
-            GameProgress.Load(data.gameProgressData);
-            InventoryManager.Load(data.InventoryManagerData);
-            PackpediaManager.Load(data.packpediaData);
+            currentArea = area;
         }
-        else
-            NewData();
-    }
 
-    public static void NewData()
-    {
-        print("NEW DATA");
+        public static void SaveData()
+        {
+            SaveLoadManager.Save();
+        }
 
-        CreatureStorage.Reset();
-        GameProgress.Reset();
-        InventoryManager.Reset();
-        PackpediaManager.Reset();
+        public static void LoadData()
+        {
+            SaveData data = SaveLoadManager.GetSave();
+
+            if (data != null)
+            {
+                CreatureStorage.Load(data.creatureStorageData);
+                GameProgressManager.Load(data.gameProgressData);
+                InventoryManager.Load(data.InventoryManagerData);
+                PackpediaManager.Load(data.packpediaData);
+            }
+            else
+                NewData();
+        }
+
+        public static void NewData()
+        {
+            print("NEW DATA");
+
+            CreatureStorage.Ref.Reset();
+            GameProgressManager.Ref.Reset();
+            InventoryManager.Ref.Reset();
+            PackpediaManager.Ref.Reset();
+        }
     }
-}
