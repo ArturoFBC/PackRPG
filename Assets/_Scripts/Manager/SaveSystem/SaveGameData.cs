@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using GameProgress;
 using UnityEngine;
@@ -23,18 +24,6 @@ namespace SaveLoad
     }
 
     [System.Serializable]
-    public class GameProgressData
-    {
-        public Dictionary<int, bool> _AreaStates = new Dictionary<int, bool>();
-
-        public GameProgressData(GameProgressManager gameProgress)
-        {
-            foreach (AreaUnlock areaUnlock in gameProgress.GetAreaList())
-                _AreaStates.Add(ScriptableReferencesHolder.GetAreaIndex(areaUnlock.area), areaUnlock.unlocked);
-        }
-    }
-
-    [System.Serializable]
     public class InventoryManagerData
     {
         public int _GeneralEssence = 0;
@@ -46,8 +35,8 @@ namespace SaveLoad
         {
             _GeneralEssence = inventoryManager.GetEssence();
 
-            foreach (InventoryEntry ii in inventoryManager._Items)
-                _Items.Add(ii.item.GetSaveData(), ii.amount);
+            foreach (InventoryEntry inventoryEntry in inventoryManager._Items)
+                _Items.Add(inventoryEntry.item.GetSaveData(), inventoryEntry.amount);
 
             foreach (EssenceValue essenceValue in inventoryManager._SpecificEssences)
                 _SpecificEssences.Add(ScriptableReferencesHolder.GetSpeciesIndex(essenceValue.species), essenceValue.amount);
@@ -70,14 +59,14 @@ namespace SaveLoad
     }
 
     [System.Serializable]
-    public class SaveData
+    public class SaveGameData
     {
         public CreatureStorageData creatureStorageData;
         public GameProgressData gameProgressData;
         public InventoryManagerData InventoryManagerData;
         public PackpediaData packpediaData;
 
-        public SaveData()
+        public SaveGameData()
         {
             creatureStorageData = new CreatureStorageData(CreatureStorage.Ref);
             gameProgressData = new GameProgressData(GameProgressManager.Ref);

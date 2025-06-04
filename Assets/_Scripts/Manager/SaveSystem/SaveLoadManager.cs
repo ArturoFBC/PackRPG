@@ -12,7 +12,7 @@ namespace SaveLoad
         static string _SaveFileName = "savegame{0}.data";
 
         static bool _Loaded = false;
-        static SaveData[] _SaveStates = new SaveData[_SaveSlotAmount];
+        static SaveGameData[] _SaveStates = new SaveGameData[_SaveSlotAmount];
         static uint _SelectedSlot;
         public static uint selectedSlot
         {
@@ -35,7 +35,7 @@ namespace SaveLoad
             string path = GetSavePath(_SelectedSlot);
             FileStream stream = new FileStream(path, FileMode.Create);
 
-            _SaveStates[_SelectedSlot] = new SaveData();
+            _SaveStates[_SelectedSlot] = new SaveGameData();
 
             formatter.Serialize(stream, _SaveStates[_SelectedSlot]);
             stream.Close();
@@ -43,7 +43,7 @@ namespace SaveLoad
             Debug.Log("Saved to file " + path);
         }
 
-        public static SaveData GetSave()
+        public static SaveGameData GetSave()
         {
             if (!_Loaded)
                 LoadAllStates();
@@ -61,7 +61,7 @@ namespace SaveLoad
                 File.Delete(path);
         }
 
-        static SaveData Load(uint index)
+        static SaveGameData Load(uint index)
         {
             string path = GetSavePath(index);
 
@@ -72,7 +72,7 @@ namespace SaveLoad
                 BinaryFormatter formatter = new BinaryFormatter();
                 FileStream stream = new FileStream(path, FileMode.Open);
 
-                SaveData data = formatter.Deserialize(stream) as SaveData;
+                SaveGameData data = formatter.Deserialize(stream) as SaveGameData;
                 stream.Close();
 
                 return data;

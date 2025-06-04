@@ -6,5 +6,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Area/GameProgressEditor")]
 public class GameProgressEditor : ScriptableObject
 {
-    public AreaList areaStates;
+    public List<Area> areas;
 }

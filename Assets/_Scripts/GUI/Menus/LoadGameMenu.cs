@@ -18,7 +18,7 @@ public class LoadGameMenu : MonoBehaviour
         for (uint i = 0; i < SaveLoadManager._SaveSlotAmount; i++)
         {
             SaveLoadManager.selectedSlot = i;
-            SaveData saveData = SaveLoadManager.GetSave();
+            SaveGameData saveData = SaveLoadManager.GetSave();
 
             GameObject newButton = Instantiate(_ButtonPrefab, _ButtonParent);
 

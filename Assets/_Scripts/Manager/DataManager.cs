@@ -49,7 +49,7 @@ using SaveLoad;
 
         public static void LoadData()
         {
-            SaveData data = SaveLoadManager.GetSave();
+            SaveGameData data = SaveLoadManager.GetSave();
 
             if (data != null)
             {

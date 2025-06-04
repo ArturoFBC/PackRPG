@@ -2,25 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SaveLoad;
+using System;
 
 namespace GameProgress
 {
 
     public class GameProgressManager : Singleton<GameProgressManager>, ISaveable
     {
-        private AreaList _AreaStates;
+        private List<Area> areas;
 
-        /*
-        private static List<ProgressMilestone> milestones;
-        private static int currentMilestoneIndex;
-        */
+        private List<Mission> missions;
 
-        /*
-        public static void SetCurrentMilestone( int index )
-        {
-            currentMilestoneIndex = index;
-        }
-        */
+        private List<Milestone> milestones;
 
         // Used on the editor to fake the initialization of the data
         [SerializeField]
@@ -28,38 +21,65 @@ namespace GameProgress
 
         protected override void InheritedAwake()
         {
-            _AreaStates = gameProgressEditor.areaStates;
+            areas = gameProgressEditor.areas;
         }
 
 
-        public AreaList GetAreaList()
+        public List<Area> GetAreaList()
         {
-            return _AreaStates;
-        }
-
-        public void UnlockArea(Area area)
-        {
-            if (_AreaStates.ContainsKey(area))
-                _AreaStates[area] = true;
-            else
-                Debug.LogError("Attempt to unlock undefined area: " + area.name);
+            return areas;
         }
 
         public static void Load(GameProgressData data)
         {
-            foreach (int areaIndex in data._AreaStates.Keys)
-                Ref._AreaStates[ScriptableReferencesHolder.GetAreaReference(areaIndex)] = data._AreaStates[areaIndex];
+
         }
 
         public void Reset()
         {
-            //Lock everything
-            Ref._AreaStates = new AreaList();
-            foreach (AreaUnlock areaUnlock in Resources.FindObjectsOfTypeAll<GameProgressEditor>()[0].areaStates)
-                Ref._AreaStates.Add(areaUnlock.area, false);
 
-            //Unlock first area
-            Ref._AreaStates[ScriptableReferencesHolder.GetAreaReference(0)] = true;
+        }
+
+        internal IEnumerable<KeyValuePair<Area, bool>> GetAllAreasUnlockStatus()
+        {
+            Dictionary<Area, bool> returnStatus = new Dictionary<Area, bool>();
+
+            List<string> completedMilestones = GetCompletedMilestonesIds();
+
+            for (int i = 0; i < areas.Count; i++)
+            {
+                bool unlock = true;
+                foreach (string milestoneId in areas[i].requiredMilestones)
+                {
+                    if (completedMilestones.Contains(milestoneId) == false)
+                    {
+                        unlock = false;
+                        break;
+                    }
+                }
+
+                returnStatus.Add(areas[i], unlock);
+            }
+
+            return returnStatus;
+        }
+
+        private List<string> GetCompletedMilestonesIds()
+        {
+            List<Milestone> completedMilestones = milestones.FindAll(x => x.IsCompleted() == true);
+
+            List<string> milestoneIds = new List<string>();
+            foreach(Milestone milestone in completedMilestones)
+            {
+                milestoneIds.Add(milestone.GetID());
+            }
+
+            return milestoneIds;
+        }
+
+        internal IEnumerable<Mission> GetMissions()
+        {
+            throw new NotImplementedException();
         }
     }
 }

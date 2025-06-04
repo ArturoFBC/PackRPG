@@ -7,40 +7,20 @@ using UnityEngine;
 
 namespace GameProgress
 {
-    public class Goal
-    {
-        public string id;
-        public string description;
-        public int goalValue;
-    }
-
-    public class MilestoneData : ScriptableObject
-    {
-        public string id { get; private set; }
-        public string description { get; private set; }
-
-        [SerializeField] private List<Goal> goalList;
-
-        public List<Goal> GetGoals()
-        {
-            return new List<Goal>(goalList);
-        }
-    }
-
     public class Milestone
     {
         private MilestoneData myData;
 
-        private Dictionary<Goal, int> goalProgress;
+        private Dictionary<GoalData, int> goalProgress;
 
-        public Action<Milestone, Goal, int> GoalPogressEvent;
+        public Action<Milestone, GoalData, int> GoalPogressEvent;
 
-        Milestone(MilestoneData myData, Dictionary<string, int> initialGoalProgress )
+        public Milestone(MilestoneData myData, Dictionary<string, int> initialGoalProgress )
         {
             this.myData = myData;
 
-            goalProgress = new Dictionary<Goal, int>();
-            foreach (Goal goal in myData.GetGoals())
+            goalProgress = new Dictionary<GoalData, int>();
+            foreach (GoalData goal in myData.GetGoals())
             {
                 int currentProgress = 0;
 
@@ -53,7 +33,7 @@ namespace GameProgress
 
         public void ReportProgress(string id, int progress)
         {
-            Goal currentGoal = goalProgress.Keys.First(k => k.id == id);
+            GoalData currentGoal = goalProgress.Keys.First(k => k.id == id);
 
             if (goalProgress.ContainsKey(currentGoal))
             {
@@ -64,13 +44,23 @@ namespace GameProgress
 
         public bool IsCompleted()
         {
-            foreach (KeyValuePair<Goal, int> pair in goalProgress)
+            foreach (KeyValuePair<GoalData, int> pair in goalProgress)
             {
                 if (pair.Key.goalValue > pair.Value)
                     return false;
             }
 
             return true;
+        }
+
+        public string GetID()
+        {
+            return myData.id;
+        }
+
+        public Dictionary<GoalData,int> GetGoalDatas()
+        {
+            return goalProgress;
         }
     }
 

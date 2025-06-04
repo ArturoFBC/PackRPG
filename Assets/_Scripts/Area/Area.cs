@@ -47,6 +47,7 @@ public class Area : ScriptableObject
         }
     }
 
+
     public SceneReference scene;
 
     public int areaLevel;
@@ -60,6 +61,8 @@ public class Area : ScriptableObject
     public Vector3 startingPosition;
     public Vector3 exitToNextAreaPosition;
     public Area nextArea;
+
+    [SerializeField] public List<string> requiredMilestones = new List<string>();
 
     public List<ItemDropRate> GetDropRates()
     {

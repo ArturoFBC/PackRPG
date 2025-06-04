@@ -17,15 +17,15 @@ public class MapLairMenu : MonoBehaviour
             Destroy(child.gameObject);
 
         // Add and configure area buttons
-        foreach ( AreaUnlock areaUnlock in GameProgressManager.Ref.GetAreaList() )
+        foreach ( KeyValuePair<Area,bool> areaPair in GameProgressManager.Ref.GetAllAreasUnlockStatus() )
         {
             GameObject newButtonGameObject = Instantiate(_ButtonPrefab, _ButtonsParent);
             Button newButtonBehaviour = newButtonGameObject.GetComponentInChildren<Button>();
             ChangeSceneButton newChangeSceneBehaviour = newButtonBehaviour.gameObject.AddComponent<ChangeSceneButton>();
 
-            newButtonBehaviour.onClick.AddListener( delegate {    newChangeSceneBehaviour.GoToArea(areaUnlock.area);    } );
-            newButtonBehaviour.interactable = areaUnlock.unlocked;
-            newButtonGameObject.GetComponentInChildren<TextMeshProUGUI>().text = areaUnlock.area.name + " - Level " + areaUnlock.area.areaLevel + " area";
+            newButtonBehaviour.onClick.AddListener( delegate {    newChangeSceneBehaviour.GoToArea(areaPair.Key);    } );
+            newButtonBehaviour.interactable = areaPair.Value;
+            newButtonGameObject.GetComponentInChildren<TextMeshProUGUI>().text = areaPair.Key.name + " - Level " + areaPair.Key.areaLevel + " area";
         }
     }
 }
