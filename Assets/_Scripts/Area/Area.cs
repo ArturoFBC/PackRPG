@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MilestoneData = GameProgress.MilestoneData;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -62,7 +63,7 @@ public class Area : ScriptableObject
     public Vector3 exitToNextAreaPosition;
     public Area nextArea;
 
-    [SerializeField] public List<string> requiredMilestones = new List<string>();
+    [SerializeField] public List<GameProgress.MilestoneData> requiredMilestones = new List<GameProgress.MilestoneData>();
 
     public List<ItemDropRate> GetDropRates()
     {

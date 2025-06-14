@@ -3,10 +3,12 @@ using UnityEngine;
 
 namespace GameProgress
 {
-    public class MilestoneData
+    [CreateAssetMenu(menuName = "GameProgress/MilestoneData")]
+    [System.Serializable]
+    public class MilestoneData : ScriptableObject
     {
-        public string id { get; private set; }
-        public string description { get; private set; }
+        public string id;
+        public string description;
 
         [SerializeField] private List<GoalData> goalList;
 

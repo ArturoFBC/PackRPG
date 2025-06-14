@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using SaveLoad;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Game progress to be used for testing while in the editor
-[CreateAssetMenu(menuName = "Area/GameProgressEditor")]
-public class GameProgressEditor : ScriptableObject
+namespace GameProgress
 {
-    public List<Area> areas;
+    // Game progress to be used for testing while in the editor
+    [CreateAssetMenu(menuName = "GameProgress/GameProgressEditor")]
+    public class GameProgressEditor : ScriptableObject
+    {
+        public List<MissionSaveData> gameProgressData;
+    }
 }

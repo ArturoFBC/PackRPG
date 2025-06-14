@@ -6,38 +6,37 @@ using UnityEngine;
 namespace SaveLoad
 {
     [System.Serializable]
+    public struct GoalSaveData
+    {
+        public string id;
+        public int currentValue;
+        public bool completed;
+    }
+
+    [System.Serializable]
+    public struct MilestoneSaveData
+    {
+        public string id;
+        public List<GoalSaveData> goalCurrentValues;
+        public bool completed;
+    }
+
+    [System.Serializable]
+    public struct MissionSaveData
+    {
+        public string id;
+        public List<MilestoneSaveData> milestoneCurrentValues;
+        public bool completed;
+    }
+
+    [System.Serializable]
     public class GameProgressData
     {
-        [System.Serializable]
-        struct GoalSaveData
+        public List<MissionSaveData> missionSaveDatas = new List<MissionSaveData>();
+
+        public GameProgressData()
         {
-            public string id;
-            public int currentValue;
-            public bool completed;
-        }
-
-        [System.Serializable]
-        struct MilestoneSaveData
-        {
-            public string id;
-            public List<GoalSaveData> goalCurrentValues;
-            public bool completed;
-        }
-
-        [System.Serializable]
-        struct MissionSaveData
-        {
-            public string id;
-            public List<MilestoneSaveData> milestoneCurrentValues;
-            public bool completed;
-        }
-
-
-        public GameProgressData(GameProgressManager gameProgress)
-        {
-            List<MissionSaveData> missionSaveDatas = new List<MissionSaveData>();
-
-            foreach (Mission mission in gameProgress.GetMissions())
+            foreach (Mission mission in GameProgressManager.GetMissions())
             {
                 MissionSaveData missionSaveData = new MissionSaveData();
                 missionSaveData.id = mission.GetId();
@@ -49,29 +48,42 @@ namespace SaveLoad
                 }
                 else
                 {
-                    missionSaveData.milestoneCurrentValues = GetMilestoneSaveData(mission.GetMilestones());
+                    missionSaveData.milestoneCurrentValues = GetMilestoneSaveData(mission);
                 }
 
                 missionSaveDatas.Add(missionSaveData);
             }
         }
 
-        private static List<MilestoneSaveData> GetMilestoneSaveData(IEnumerable<Milestone> milestones)
+        private static List<MilestoneSaveData> GetMilestoneSaveData(Mission mission)
         {
             List<MilestoneSaveData> milestonesSaveData = new List<MilestoneSaveData>();
-            foreach (Milestone milestone in milestones)
+
+            List<MilestoneData> milesonesData = mission.GetMilestones();
+            int currentMilestoneIndex = milesonesData.IndexOf(mission.GetCurrentMilestone().GetData());
+
+            for (int i = 0; i < milesonesData.Count; i++)
             {
+                MilestoneData milestoneData = milesonesData[i];
                 MilestoneSaveData milestoneSaveData = new MilestoneSaveData();
-                milestoneSaveData.id = milestone.GetID();
-                milestoneSaveData.completed = milestone.IsCompleted();
-                if (milestoneSaveData.completed)
+                milestoneSaveData.id = milestoneData.id;
+
+                if (i < currentMilestoneIndex)
                 {
+                    milestoneSaveData.completed = true;
+                    milestoneSaveData.goalCurrentValues = new List<GoalSaveData>();
+                }
+                else if ( i > currentMilestoneIndex)
+                {
+                    milestoneSaveData.completed = false;
                     milestoneSaveData.goalCurrentValues = new List<GoalSaveData>();
                 }
                 else
                 {
-                    milestoneSaveData.goalCurrentValues = GetGoalCurrentValues(milestone.GetGoalDatas());
+                    milestoneSaveData.completed = false;
+                    milestoneSaveData.goalCurrentValues = GetGoalCurrentValues(mission.GetCurrentMilestone().GetGoalDatas());
                 }
+
                 milestonesSaveData.Add(milestoneSaveData);
             }
 

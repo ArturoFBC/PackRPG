@@ -69,7 +69,7 @@ namespace SaveLoad
         public SaveGameData()
         {
             creatureStorageData = new CreatureStorageData(CreatureStorage.Ref);
-            gameProgressData = new GameProgressData(GameProgressManager.Ref);
+            gameProgressData = new GameProgressData();
             InventoryManagerData = new InventoryManagerData(InventoryManager.Ref);
             packpediaData = new PackpediaData(PackpediaManager.Ref);
         }

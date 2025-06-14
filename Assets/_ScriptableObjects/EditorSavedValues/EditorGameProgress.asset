@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffbf648616020a43a7752312390bc4e, type: 3}
   m_Name: EditorGameProgress
   m_EditorClassIdentifier: Assembly-CSharp::GameProgressEditor
-  areaStates:
-    areas:
-    - area: {fileID: 11400000, guid: f3df123eb4debde48b7abe4c28c08a10, type: 2}
-      unlocked: 1
-    - area: {fileID: 11400000, guid: 47c3c4c80ffd64e44aa2d3659f5cae64, type: 2}
-      unlocked: 1
+  gameProgressData:
+  - id: BasicTuto
+    milestoneCurrentValues:
+    - id: MoveAround
+      goalCurrentValues:
+      - id: MoveToLog
+        currentValue: 0
+        completed: 0
+      completed: 0
+    completed: 0

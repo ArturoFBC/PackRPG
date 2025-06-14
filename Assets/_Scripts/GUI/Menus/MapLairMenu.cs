@@ -17,7 +17,7 @@ public class MapLairMenu : MonoBehaviour
             Destroy(child.gameObject);
 
         // Add and configure area buttons
-        foreach ( KeyValuePair<Area,bool> areaPair in GameProgressManager.Ref.GetAllAreasUnlockStatus() )
+        foreach ( KeyValuePair<Area,bool> areaPair in GameProgressManager.GetAllAreasUnlockStatus() )
         {
             GameObject newButtonGameObject = Instantiate(_ButtonPrefab, _ButtonsParent);
             Button newButtonBehaviour = newButtonGameObject.GetComponentInChildren<Button>();

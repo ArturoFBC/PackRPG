@@ -59,3 +59,6 @@ MonoBehaviour:
   startingPosition: {x: -187, y: -2.7, z: -185}
   exitToNextAreaPosition: {x: -187, y: 0.5, z: 180}
   nextArea: {fileID: 11400000, guid: 47c3c4c80ffd64e44aa2d3659f5cae64, type: 2}
+  requiredMilestones:
+  - {fileID: 0}
+  - {fileID: 0}

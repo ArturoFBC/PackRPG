@@ -36,6 +36,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 123.44263, y: 460.65118, z: 1.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -160,13 +161,13 @@ MonoBehaviour:
   _UnloadTime: 1
   _LairReference:
     sceneAsset: {fileID: 102900000, guid: a9da54604e1294c4c972f29fa50f5f45, type: 3}
-    scenePath: Assets/Levels/Lair/Lair.unity
+    scenePath: Assets/Levels/_Lair/Lair.unity
   _MainMenuReference:
     sceneAsset: {fileID: 102900000, guid: bebe388dbd1218e4db3ad5aeea21b27d, type: 3}
-    scenePath: Assets/Levels/MainMenu/MainMenu.unity
+    scenePath: Assets/Levels/_MainMenu/MainMenu.unity
   _StarterSelectionReference:
     sceneAsset: {fileID: 102900000, guid: 791eb32714eb7f747883045000cf47b3, type: 3}
-    scenePath: Assets/Levels/ChooseInitial/ChooseInitialCreature.unity
+    scenePath: Assets/Levels/_ChooseInitial/ChooseInitialCreature.unity
 --- !u!114 &4161085128498453751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42f13d3ea47b4f44ac91d5a5819b805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  areaList: {fileID: 11400000, guid: 4283e3f8efa99ee4b9e507fb99632b74, type: 2}
+  missionsData:
+  - {fileID: 11400000, guid: c3b5f063c7d094b4c91f692368f8e02c, type: 2}
   gameProgressEditor: {fileID: 11400000, guid: 29af3ecd0597a13469a0c9b2b9819e27, type: 2}
 --- !u!114 &3263097230928650958
 MonoBehaviour:

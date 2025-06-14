@@ -54,7 +54,7 @@ using SaveLoad;
             if (data != null)
             {
                 CreatureStorage.Load(data.creatureStorageData);
-                GameProgressManager.Load(data.gameProgressData);
+                GameProgressManager.Load(data.gameProgressData.missionSaveDatas);
                 InventoryManager.Load(data.InventoryManagerData);
                 PackpediaManager.Load(data.packpediaData);
             }

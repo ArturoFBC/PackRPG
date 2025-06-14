@@ -1,6 +1,11 @@
+using System;
+using UnityEngine;
+
 namespace GameProgress
 {
-    public class GoalData
+    [CreateAssetMenu(menuName = "GameProgress/GoalData")]
+    [System.Serializable]
+    public class GoalData : ScriptableObject
     {
         public string id;
         public string description;

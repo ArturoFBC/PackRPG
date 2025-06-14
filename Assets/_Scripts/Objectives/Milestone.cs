@@ -1,45 +1,88 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
 using UnityEngine;
+using SaveLoad;
+using System.Linq;
+using UnityEditorInternal.VersionControl;
 
 namespace GameProgress
 {
+    public enum MilestoneStatus
+    {
+        NOT_STARTED,
+        IN_PROGRESS,
+        COMPLETED
+    }
+
+    [Serializable]
     public class Milestone
     {
-        private MilestoneData myData;
+        [SerializeField] private MilestoneData myData;
 
-        private Dictionary<GoalData, int> goalProgress;
+        [SerializeField] private Dictionary<GoalData, int> goalProgress;
 
-        public Action<Milestone, GoalData, int> GoalPogressEvent;
+        [SerializeField] public MilestoneStatus myStatus { get; private set; }
 
-        public Milestone(MilestoneData myData, Dictionary<string, int> initialGoalProgress )
+        public static Action<MilestoneData, MilestoneStatus> MilestoneStatusUpdatedEvent;
+        public Action<MilestoneData, GoalData, int> GoalPogressEvent;
+
+
+        public Milestone(MilestoneData newData, MilestoneSaveData milestoneSaveData )
         {
-            this.myData = myData;
+            Construct(newData, milestoneSaveData);
+        }
+
+        public Milestone(MilestoneData newData)
+        {
+            Construct(newData, new MilestoneSaveData());
+        }
+
+        private void Construct(MilestoneData newData, MilestoneSaveData milestoneSaveData)
+        {
+            myData = newData;
 
             goalProgress = new Dictionary<GoalData, int>();
             foreach (GoalData goal in myData.GetGoals())
             {
                 int currentProgress = 0;
 
-                if (initialGoalProgress.ContainsKey(goal.id))
-                    currentProgress = initialGoalProgress[goal.id];
+                if (milestoneSaveData.Equals(default(MilestoneSaveData)) == false)
+                {
+                    GoalSaveData goalSaveData = milestoneSaveData.goalCurrentValues.FirstOrDefault(x => x.id == goal.id);
+
+                    // If the data with the correct id could be found
+                    if (goalSaveData.Equals(default(GoalSaveData)) == false)
+                    {
+                        currentProgress = goalSaveData.currentValue;
+                    }
+                }
 
                 goalProgress.Add(goal, currentProgress);
             }
+
+            ChangeStatus(MilestoneStatus.IN_PROGRESS);
+            Debug.Log(">>> Milestone activated <" + myData.id + ">");
         }
 
-        public void ReportProgress(string id, int progress)
+        public void ReportProgress(GoalData currentGoal, int progress)
         {
-            GoalData currentGoal = goalProgress.Keys.First(k => k.id == id);
-
-            if (goalProgress.ContainsKey(currentGoal))
+            if (goalProgress.ContainsKey(currentGoal) && goalProgress[currentGoal] < currentGoal.goalValue)
             {
                 goalProgress[currentGoal] += progress;
-                GoalPogressEvent?.Invoke(this, currentGoal, goalProgress[currentGoal]);
+                GoalPogressEvent?.Invoke(myData, currentGoal, goalProgress[currentGoal]);
+
+                if (IsCompleted())
+                {
+                    Debug.Log("<<< Milestone completed <" + myData.id + ">");
+                    ChangeStatus(MilestoneStatus.COMPLETED);
+                }
             }
+        }
+
+        private void ChangeStatus(MilestoneStatus newStatus)
+        {
+            myStatus = newStatus;
+            MilestoneStatusUpdatedEvent?.Invoke(myData, myStatus);
         }
 
         public bool IsCompleted()
@@ -51,6 +94,11 @@ namespace GameProgress
             }
 
             return true;
+        }
+
+        public MilestoneData GetData()
+        {
+            return myData;
         }
 
         public string GetID()

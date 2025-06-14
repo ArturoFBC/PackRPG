@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace GameProgress
 {
+    [CreateAssetMenu(menuName = "GameProgress/MissionData")]
+    [System.Serializable]
     public class MissionData : ScriptableObject
     {
-        public string id { get; private set; }
-        public string description { get; private set; }
+        [SerializeField] public string id;
+        [SerializeField] public string description;
 
         [SerializeField] private List<MilestoneData> milestones;
 
