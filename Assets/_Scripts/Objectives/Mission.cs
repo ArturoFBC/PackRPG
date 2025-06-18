@@ -27,15 +27,17 @@ namespace GameProgress
 
             foreach (MilestoneData milestoneData in missionData.GetMilestones())
             {
-                MilestoneSaveData milestoneSaveData = missionCompletion.milestoneCurrentValues.FirstOrDefault(x => x.id == milestoneData.id);
+                MilestoneSaveData milestoneSaveData = missionCompletion.milestoneCurrentValues.FirstOrDefault(  x => x.id == milestoneData.id );
+                    //GetMilestoneSaveDataById(missionCompletion.milestoneCurrentValues,milestoneData.id);
 
-                if (milestoneSaveData.Equals(default(MilestoneSaveData)) == false
+                if (milestoneSaveData.Equals(default(MilestoneSaveData))
                     || milestoneSaveData.completed
                     || milestoneSaveData.goalCurrentValues == null || milestoneSaveData.goalCurrentValues.Count == 0)
                 { 
                     continue;
                 }
 
+                Debug.Log($"{milestoneSaveData.id} was not found.");
                 currentMilestone = new Milestone(milestoneData, milestoneSaveData);
             }
 
@@ -43,6 +45,20 @@ namespace GameProgress
             {
                 currentMilestone = new Milestone(missionData.GetMilestones()[0]);
             }
+        }
+
+        private MilestoneSaveData GetMilestoneSaveDataById(List<MilestoneSaveData> milestoneSaves, string id)
+        {
+            foreach (MilestoneSaveData milestoneSaveData in milestoneSaves)
+            {
+                Debug.Log(milestoneSaveData.id);
+                Debug.Log(id);
+                Debug.Log(milestoneSaveData.id == id);
+                if (milestoneSaveData.id == id)
+                    return milestoneSaveData;
+            }
+
+            return default(MilestoneSaveData);
         }
 
         public Mission(MissionData missionData)

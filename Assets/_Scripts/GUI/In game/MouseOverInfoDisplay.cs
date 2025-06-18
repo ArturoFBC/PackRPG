@@ -49,10 +49,18 @@ public class MouseOverInfoDisplay : MonoBehaviour
     public void DisplayEnemyInfo( GameObject enemy )
     {
         CreatureStats creatureStats = enemy.GetComponent<CreatureStats>();
-        Species enemySpecies = creatureStats.GetSpecimen().species;
+        Specimen enemySpecimen = creatureStats?.GetSpecimen();
 
-        _SpeciesDisplay.text = name = enemySpecies.name.Substring(enemySpecies.name.IndexOf('_') + 1, enemySpecies.name.Length - enemySpecies.name.IndexOf('_') - 1);
-        _SpeciesDisplay.gameObject.SetActive(true);
+        if (enemySpecimen != null)
+        {
+            Species enemySpecies = enemySpecimen.species;
+            _SpeciesDisplay.text = name = enemySpecies.name.Substring(enemySpecies.name.IndexOf('_') + 1, enemySpecies.name.Length - enemySpecies.name.IndexOf('_') - 1);
+            _SpeciesDisplay.gameObject.SetActive(true);
+
+            int level = enemy.GetComponent<Level>().level;
+            _LevelDisplay.text = level.ToString();
+            _LevelDisplay.gameObject.SetActive(true);
+        }
 
         _TierDisplay.text = creatureStats._MyTier.ToString();
         _TierDisplay.gameObject.SetActive(true);
@@ -61,10 +69,6 @@ public class MouseOverInfoDisplay : MonoBehaviour
             _TierDisplay.color = Color.white;
         else
             _TierDisplay.color = _TierDisplay.color * 1.3f;
-
-        int level = enemy.GetComponent<Level>().level;
-        _LevelDisplay.text = level.ToString();
-        _LevelDisplay.gameObject.SetActive(true);
 
         _HealthDisplay.gameObject.SetActive(true);
     }

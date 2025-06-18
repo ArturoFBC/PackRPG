@@ -177,7 +177,7 @@ public class CreatureHitPoints : MonoBehaviour {
 
     public void Die()
     {
-        GetComponentInChildren<Animator>().SetTrigger("KnockedOut");
+        GetComponentInChildren<Animator>()?.SetTrigger("KnockedOut");
 
         if (tag != "Player")
         {

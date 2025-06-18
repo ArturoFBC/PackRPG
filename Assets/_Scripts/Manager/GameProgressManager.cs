@@ -46,11 +46,13 @@ namespace GameProgress
                 Mission mission;
                 if (string.IsNullOrEmpty( missionSaveData.id) )
                 {
+                    Debug.Log($"{missionSaveData.id} was not found.");
                     mission = new Mission(missionData);
                     missionsState.Add(mission);
                     continue;
                 }
 
+                Debug.Log($"{missionSaveData.id} was found.");
                 mission = new Mission(missionData, missionSaveData);
                 missionsState.Add(mission);
             }
@@ -201,6 +203,9 @@ namespace GameProgress
 
         internal static MilestoneStatus GetMilestoneStatus(GoalData goal)
         {
+            if (milestoneContainsGoal == null)
+                return MilestoneStatus.NOT_STARTED;
+
             MilestoneData milestoneData = milestoneContainsGoal[goal];
 
             if (milestoneData == null)

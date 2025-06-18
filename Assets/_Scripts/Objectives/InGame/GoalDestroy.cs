@@ -7,7 +7,7 @@ namespace GameProgress
 {
     public class GoalDestroy : GoalBehabiourBase
     {
-        [SerializeField] private CreatureHitPoints myHitPoints;
+        [SerializeField] private GameObject inertObject, destructibleObject;
 
         protected override void SetCompleted()
         {
@@ -16,13 +16,15 @@ namespace GameProgress
 
         protected override void SetInProgress()
         {
-            myHitPoints.enabled = false;
-            myHitPoints.KnockOutEvent += OnDeath;
+            inertObject.SetActive(false);
+            destructibleObject.SetActive(true);
+            destructibleObject.GetComponent<CreatureHitPoints>().KnockOutEvent += OnDeath;
         }
 
         protected override void SetNotStarted()
         {
-            myHitPoints.enabled = false;
+            inertObject.SetActive(true);
+            destructibleObject.SetActive(false);
         }
 
         private void OnDeath()

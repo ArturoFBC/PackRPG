@@ -15,9 +15,9 @@ MonoBehaviour:
   gameProgressData:
   - id: BasicTuto
     milestoneCurrentValues:
-    - id: MoveAround
+    - id: DestroyLog
       goalCurrentValues:
-      - id: MoveToLog
+      - id: AttackLog
         currentValue: 0
         completed: 0
       completed: 0

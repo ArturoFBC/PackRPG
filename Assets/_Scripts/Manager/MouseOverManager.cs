@@ -24,6 +24,7 @@ public class MouseOverManager : Singleton<MouseOverManager>
 
     static private void LinkEvents()
     {
+        UnlinkEvents();
         StartMouseOverEvent += OnStartMouseOver;
         EndedMouseOverEvent += OnEndedMouseOver;
     }
