@@ -15,9 +15,9 @@ MonoBehaviour:
   gameProgressData:
   - id: BasicTuto
     milestoneCurrentValues:
-    - id: DestroyLog
+    - id: Heal
       goalCurrentValues:
-      - id: AttackLog
+      - id: HealAlly
         currentValue: 0
         completed: 0
       completed: 0

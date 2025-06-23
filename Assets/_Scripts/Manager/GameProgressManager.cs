@@ -22,16 +22,18 @@ namespace GameProgress
         private static Dictionary<MilestoneData, MissionData> missionContainsMilestone;
         #endregion
 
+        public Action<MilestoneData, MilestoneStatus> MilestoneUpdatedEvent;
+
+#if UNITY_EDITOR
         // Used on the editor to fake the initialization of the data
         [SerializeField]
         private GameProgressEditor gameProgressEditor;
-
-        public Action<MilestoneData, MilestoneStatus> MilestoneUpdatedEvent;
-
+        
         protected override void InheritedAwake()
         {
             Load(gameProgressEditor.gameProgressData);
         }
+#endif
 
         public static void Load(List<MissionSaveData> missionSaveDatas)
         {
