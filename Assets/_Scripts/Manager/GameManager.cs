@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private Transform startingPosition;
     private string StartingPositionTag = "Respawn";
+
     [SerializeField]
     private GameObject baseCreature;
 

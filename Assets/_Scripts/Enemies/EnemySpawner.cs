@@ -20,12 +20,12 @@ public static class EnemyTierValues
 {
     //                                              faint   swarm   standrd stern   raging  vigoros beta    alpha
     public static float[] sizeMultiplier      = {   1f,     0.7f,   1f,     1.3f,   1.1f,   1.2f,   1.2f,   1.4f    };
-    public static float[] offensiveMultiplier = {   0.7f,   0.7f,   1f,     1f   ,  2f,   3f  ,   2f ,    2f      };
+    public static float[] offensiveMultiplier = {   0.7f,   0.7f,   1f,     1f   ,  2f,     3f  ,   2f ,    2f      };
     public static float[] defensiveMultiplier = {   0.8f,   0.5f,   1f,     3f   ,  1f,     3f  ,   5f  ,   6f     };
-    public static float[] speedMultiplier     = {   0.8f,   2.5f,    1f,     0.8f ,  2f,   1.3f,   1.3f ,  1.5f      };
-    public static int[]   spawnNumber         = {   2,      5,      2,     1    ,  3,      3   ,   3  ,    1       };
-    public static float[] experienceMultiplier ={   0.7f,   0.6f,   1f,    3f   ,  2f,   5f  ,   7f ,    25      };
-    public static float[] spawnChance         = {   1,      1,      1,      0,      0,      0f,     0f,     1f      };
+    public static float[] speedMultiplier     = {   0.8f,   2.5f,   1f,     0.8f ,  2f,     1.3f,   1.3f ,  1.5f      };
+    public static int[]   spawnNumber         = {   2,      5,      2,      1    ,  3,      3   ,   3  ,    1       };
+    public static float[] experienceMultiplier ={   0.7f,   0.6f,   1f,     3f   ,  2f,     5f  ,   7f ,    25      };
+    public static float[] spawnChance         = {   1,      1,      1,      0    ,  0,      0f,     0f,     1f      };
     //                                              faint   swarm   standrd stern   raging  vigoros beta    alpha
     public static Color[] color = { Color.black, Color.black, Color.black, Color.green, Color.red, Color.blue, Color.yellow, Color.yellow };
 }
@@ -65,9 +65,9 @@ public class EnemySpawner : MonoBehaviour
         int quantity = EnemyTierValues.spawnNumber[(int)tiers[0]] + EnemyTierValues.spawnNumber[(int)tiers[1]];
 
         int areaLevel = DataManager._CurrentArea.areaLevel;
-        List<BaseSkill> possibleBasicSkills = enemySpecies.GetPosibleSkills(areaLevel, false, SkillCategory.BASIC);
+        List<BaseSkill> possibleBasicSkills    = enemySpecies.GetPosibleSkills(areaLevel, false, SkillCategory.BASIC);
         List<BaseSkill> possibleCooldownSkills = enemySpecies.GetPosibleSkills(areaLevel, false, SkillCategory.COOLDOWN);
-        List<BaseSkill> possiblePassiveSkills = enemySpecies.GetPosibleSkills(areaLevel, true);
+        List<BaseSkill> possiblePassiveSkills  = enemySpecies.GetPosibleSkills(areaLevel, true);
 
         for (int i = 0; i < quantity; i++)
         {

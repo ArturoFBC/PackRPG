@@ -4,6 +4,7 @@ using UnityEngine;
 using SaveLoad;
 using System.Linq;
 using UnityEditorInternal.VersionControl;
+using Interface.InGame.Console;
 
 namespace GameProgress
 {
@@ -61,6 +62,7 @@ namespace GameProgress
             }
 
             ChangeStatus(MilestoneStatus.IN_PROGRESS);
+            ConsolePanel.Ref.DisplayMessage($"Milestone activated < {myData.id} > ");
             Debug.Log(">>> Milestone activated <" + myData.id + ">");
         }
 

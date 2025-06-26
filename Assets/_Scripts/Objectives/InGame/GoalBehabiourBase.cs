@@ -17,10 +17,10 @@ namespace GameProgress
         }
 
         protected void OnMilestoneUpdated(MilestoneData milestoneData, MilestoneStatus status)
-        {
-            Debug.Log(milestoneData.id + " " + status.ToString());
+        { 
             if (milestoneData.GetGoals().Contains(goalThisCompletes))
             {
+                Debug.Log(milestoneData.id + " " + status.ToString());
                 SetStatus(status);
             }
         }

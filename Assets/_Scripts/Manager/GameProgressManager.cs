@@ -227,8 +227,6 @@ namespace GameProgress
                 }
             }
 
-            Debug.LogWarning("Queried about goal <" + goal.id + ">, belonging to milestone <" + milestoneData.id +
-                             ">, and said milestone could not be found amongst active milestones." );
             return MilestoneStatus.NOT_STARTED; 
         }
     }

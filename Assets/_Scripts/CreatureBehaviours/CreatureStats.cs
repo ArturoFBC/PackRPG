@@ -382,7 +382,9 @@ public class CreatureStats : MonoBehaviour
                     _StatusEffects[(int)statusEffect.status].active = true;
                     _StatusEffects[(int)statusEffect.status].timeRemaining = statusEffect.duration;
 
-                    GetComponent<CreatureFXandAnimation>().SetEffect(statusEffect.status);
+                    CreatureFXandAnimation creatureFX = GetComponent<CreatureFXandAnimation>();
+                    if (creatureFX != null)
+                        creatureFX.SetEffect(statusEffect.status);
                 }
             }
         }

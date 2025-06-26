@@ -114,7 +114,7 @@ public class CreatureMovement : MonoBehaviour {
 
         OnMovementStart(targetPosition);
 
-        while ( angleDifference > 1f )
+        while ( angleDifference > _TurnRate * Time.deltaTime)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, endRotation, _TurnRate * Time.deltaTime);
             yield return new WaitForEndOfFrame();
