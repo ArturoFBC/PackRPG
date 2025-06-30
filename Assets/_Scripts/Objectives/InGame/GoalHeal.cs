@@ -13,14 +13,20 @@ namespace GameProgress
         [SerializeField] private GameObject baseCreature;
 
         private GameObject creatureToHeal;
+        private GameObject creatureToHealInactive;
 
-        protected override void SetCompleted()
+        protected override void SetNotStarted()
         {
-            gameObject.SetActive(false);
+            creatureToHealInactive = Instantiate(creatureToHealData.species.model, transform);
+
+            creatureToHealInactive.GetComponent<Animator>().SetTrigger("KnockedOut");
         }
 
         protected override void SetInProgress()
         {
+            if (creatureToHealInactive != null)
+                Destroy(creatureToHealInactive);
+
             creatureToHeal = CreatureFactory.CreateCreature(creatureToHealData, baseCreature, transform.position);
 
             StartCoroutine("SetUnconscious");
@@ -52,9 +58,9 @@ namespace GameProgress
             }
         }
 
-        protected override void SetNotStarted()
+        protected override void SetCompleted()
         {
-            
+            gameObject.SetActive(false);
         }
     }
 }
