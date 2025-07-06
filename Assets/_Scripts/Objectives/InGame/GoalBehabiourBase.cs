@@ -7,6 +7,7 @@ namespace GameProgress
 {
     public abstract class GoalBehabiourBase : MonoBehaviour
     {
+        [Header("Goal")]
         [SerializeField] protected GoalData goalThisCompletes;
         [SerializeField] protected int goalAdded = 1;
 

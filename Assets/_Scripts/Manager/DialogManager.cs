@@ -1,4 +1,5 @@
-﻿using System.CodeDom.Compiler;
+﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dialogue
+namespace Interactables.Dialogue
 {
 
     public class DialogManager : Singleton<DialogManager>
@@ -24,6 +25,7 @@ namespace Dialogue
 
         private List<string> remainingSpeech = new List<string>();
 
+        public Action<Dialogue, int> SpeechDisplayedEvent;
         public delegate void SpeechEnded();
         public event SpeechEnded SpeechEndedEvent;
         public delegate void DialogEnded();
@@ -40,23 +42,26 @@ namespace Dialogue
             currentSpeakers = speakers;
 
             gameObject.SetActive(true);
-            StartSpeech(dialogue.GetSpeech(0));
+
+            StartSpeech(dialogue, 0);
         }
 
-        private void StartSpeech(Speech turn)
+        private void StartSpeech(Dialogue dialogue, int speechID)
         {
-            currentSpeech = turn;
+            currentSpeech = dialogue.GetSpeech(speechID);
 
             ConfigureUIForSpeech();
 
-            if (turn.speakerID >= currentSpeakers.Count)
+            if (currentSpeech.speakerID >= currentSpeakers.Count)
                 Debug.LogError("Dialogue error in -" + currentDialogue.name + "- dialogue, speakerIndex in speech " + currentSpeech.text + " does not exist");
 
-            Speaker speaker = currentSpeakers[turn.speakerID];
+            Speaker speaker = currentSpeakers[currentSpeech.speakerID];
             DisplaySpeaker(speaker.speakerAvatar, speaker.speakerName);
 
-            List<string> words = new List<string>(turn.text.Split(' '));
+            List<string> words = new List<string>(currentSpeech.text.Split(' '));
             DisplayText(words);
+
+            SpeechDisplayedEvent?.Invoke(dialogue, speechID);
         }
 
         private void DisplayText(List<string> words)
@@ -110,8 +115,7 @@ namespace Dialogue
             else if (currentSpeech.childrenIDs.Count == 1)
             {
                 Debug.Log("Display next speech");
-                currentSpeech = currentDialogue.GetSpeech(currentSpeech.childrenIDs[0]);
-                StartSpeech(currentSpeech);
+                StartSpeech(currentDialogue, currentSpeech.childrenIDs[0]);
             }
             else
             {
@@ -143,9 +147,9 @@ namespace Dialogue
 
         public void AnswerSelected(int answerIndex)
         {
-            Speech answerSpeech = currentDialogue.GetSpeech(currentSpeech.childrenIDs[answerIndex]);
+            int speechID = currentSpeech.childrenIDs[answerIndex];
 
-            StartSpeech(answerSpeech);
+            StartSpeech(currentDialogue, currentSpeech.childrenIDs[answerIndex]);
         }
 
         private void ConfigureUIForSpeech()

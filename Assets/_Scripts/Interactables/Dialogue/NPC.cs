@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Dialogue
+namespace Interactables.Dialogue
 {
     [Serializable]
     public class Speaker
@@ -26,6 +26,11 @@ namespace Dialogue
         {
             this.transform.LookAt(whoActivatedMe);
             DialogManager.Ref.DisplayDialogue(myDialogue, mySpeakers);
+        }
+
+        internal Dialogue GetDialogue()
+        {
+            return myDialogue;
         }
     }
 }

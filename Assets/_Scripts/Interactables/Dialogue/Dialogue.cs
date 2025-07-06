@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Dialogue
+namespace Interactables.Dialogue
 {
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
     public class Dialogue : ScriptableObject
@@ -31,7 +31,7 @@ namespace Dialogue
                 SaveSpeeches();
         }
 
-        private void SaveSpeeches()
+        public void SaveSpeeches()
         {
             saveSpeeches.Clear();
             saveSpeechIDs.Clear();

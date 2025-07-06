@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
-using Dialogue = Dialogue.Dialogue;
+using Dialogue = Interactables.Dialogue.Dialogue;
 using Unity.Mathematics;
 using UnityEngine.UI.Extensions;
 
-namespace Dialogue
+namespace Interactables.Dialogue
 {
     public class DialogueEditor : EditorWindow
     {
@@ -89,6 +89,8 @@ namespace Dialogue
                     Undo.RecordObject(currentDialogue, "Moved dialogue speech");
                     draggedSpeech.editorPosition.position = Event.current.mousePosition + dragOffset;
                     Repaint();
+
+                    EditorUtility.SetDirty(currentDialogue);
                 }
             }
             else if (Event.current.type == EventType.MouseUp)
@@ -104,6 +106,8 @@ namespace Dialogue
                     {
                         Undo.RecordObject(currentDialogue, "Dialogue reparent");
                         currentDialogue.ReparentSpeech(linkingSpeech, childSpeech);
+
+                        EditorUtility.SetDirty(currentDialogue);
                     }
                     Repaint();
                     linkingSpeech = null;
@@ -163,6 +167,8 @@ namespace Dialogue
             {
                 Undo.RecordObject(currentDialogue, "Edit speech speaker");
                 speech.speakerID = editingID;
+
+                EditorUtility.SetDirty(currentDialogue);
             }
             GUILayout.EndHorizontal();
 
@@ -172,6 +178,8 @@ namespace Dialogue
             {
                 Undo.RecordObject(currentDialogue, "Edit dialogue text");
                 speech.text = editingText;
+
+                EditorUtility.SetDirty(currentDialogue);
             }
 
             GUILayout.BeginHorizontal();
@@ -192,6 +200,8 @@ namespace Dialogue
             {
                 Undo.RecordObject(currentDialogue, "Dialogue unlink");
                 currentDialogue.ReparentSpeech(null, speech);
+
+                EditorUtility.SetDirty(currentDialogue);
             }
 
             DrawChildConnections(speech);
@@ -209,6 +219,8 @@ namespace Dialogue
                 Undo.RecordObject(currentDialogue, "Removed dialogue speech");
                 currentDialogue.DeleteSpeech(removeSpeechRequested);
                 removeSpeechRequested = null;
+
+                EditorUtility.SetDirty(currentDialogue);
             }
         }
 
@@ -219,6 +231,8 @@ namespace Dialogue
                 Undo.RecordObject(currentDialogue, "Added dialogue speech");
                 currentDialogue.CreateChildOfSpeech(childSpeechRequested);
                 childSpeechRequested = null;
+
+                EditorUtility.SetDirty(currentDialogue);
             }
         }
 
@@ -259,6 +273,7 @@ namespace Dialogue
         private void OnEnable()
         {
             Selection.selectionChanged += OnSelectionChanged;
+            OnSelectionChanged();
         }
 
         private void OnDisable()
@@ -274,6 +289,10 @@ namespace Dialogue
             {
                 currentDialogue = dialogue;
                 Repaint();
+            }
+            else
+            {
+                dialogue.SaveSpeeches();
             }
         }
     }

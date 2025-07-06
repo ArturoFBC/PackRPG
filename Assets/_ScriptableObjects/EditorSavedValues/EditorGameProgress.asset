@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: EditorGameProgress
   m_EditorClassIdentifier: Assembly-CSharp::GameProgressEditor
   gameProgressData:
-  - id: BasicTuto
+  - id: Introduction
     milestoneCurrentValues:
-    - id: MoveAround
-      goalCurrentValues:
-      - id: MoveToLog
-        currentValue: 0
-        completed: 0
+    - id: Speak with packmates milestone
+      goalCurrentValues: []
       completed: 0
     completed: 0
