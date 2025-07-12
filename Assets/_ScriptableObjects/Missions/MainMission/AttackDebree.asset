@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b7a45caae0a2a747bd107870b4987bf, type: 3}
-  m_Name: SpeakWithPackmates
+  m_Name: AttackDebree
   m_EditorClassIdentifier: 
-  id: Speak with packmates milestone
-  description: Speak with your packmates.
+  id: Destroy debree
+  description: Destroy debree blocking the way.
   goalList:
-  - {fileID: 11400000, guid: 6d68740823ceda34896855bef3979508, type: 2}
-  - {fileID: 11400000, guid: 0e640c1f40d7e824f8e063d9c23b3973, type: 2}
+  - {fileID: 11400000, guid: f727525e0dbfc744995d55d288eee82d, type: 2}

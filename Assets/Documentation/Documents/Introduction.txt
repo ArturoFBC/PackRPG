@@ -1,0 +1,11 @@
+-Talk to the 2 packlings.
+-Interact with the eggs.
+-Get to the middle of the lair.
+  Activate camera shake.
+  Stone falling on the eggs.
+  Stone falling on the entrance (not interactable)
+  Stone falling on the 2 npc packlings (not interactable)
+-Interact with the egg.
+-Resurrect your team mate.
+-Break the stone.
+  The characters faint.

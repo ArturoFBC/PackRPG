@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7a45caae0a2a747bd107870b4987bf, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: 92450581499c4ea41a4782c6bf09b0fc, type: 3}
+  m_Name: GrabTheRemainingEggGoal
   m_EditorClassIdentifier: 
-  id: DestroyLog
-  description: Destroy log
-  goalList:
-  - {fileID: 11400000, guid: f727525e0dbfc744995d55d288eee82d, type: 2}
+  id: Grab the remaining egg goal
+  description: Grab the remaining egg.
+  goalValue: 1

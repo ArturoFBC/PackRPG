@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92450581499c4ea41a4782c6bf09b0fc, type: 3}
-  m_Name: MoveG
+  m_Name: AttackDebreeGoal
   m_EditorClassIdentifier: 
-  id: MoveToLog
-  description: Move to log
+  id: AttackLog
+  description: AttackLog
   goalValue: 1

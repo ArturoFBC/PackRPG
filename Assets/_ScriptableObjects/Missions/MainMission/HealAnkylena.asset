@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92450581499c4ea41a4782c6bf09b0fc, type: 3}
-  m_Name: HealG
+  m_Script: {fileID: 11500000, guid: 3b7a45caae0a2a747bd107870b4987bf, type: 3}
+  m_Name: HealAnkylena
   m_EditorClassIdentifier: 
-  id: HealAlly
-  description: Heal Ally
-  goalValue: 1
+  id: Heal Ankylena
+  description: Use a healing skill on Akylena.
+  goalList:
+  - {fileID: 11400000, guid: 9d3932107491bdd44b7c083d67222747, type: 2}

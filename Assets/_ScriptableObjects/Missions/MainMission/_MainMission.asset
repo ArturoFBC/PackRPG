@@ -17,5 +17,7 @@ MonoBehaviour:
   milestones:
   - {fileID: 11400000, guid: 8c5c67ee44756364085144e15b6f8c9f, type: 2}
   - {fileID: 11400000, guid: e138db0501ef3c1408f5d14e23a0240b, type: 2}
+  - {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
+  - {fileID: 11400000, guid: 9b3cd0ef4377ab7478aabf9c5449637b, type: 2}
   - {fileID: 11400000, guid: 1093e0765e1010b45bf3ed2abc7707b9, type: 2}
   - {fileID: 11400000, guid: 2b7a825475fdd0149b7ec78bde3b99ea, type: 2}
