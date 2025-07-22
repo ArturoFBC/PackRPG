@@ -24,7 +24,9 @@ namespace Interactables.Dialogue
 
         public void Interact(Transform whoActivatedMe)
         {
-            this.transform.LookAt(whoActivatedMe);
+            if (mySpeakers.Count > 1)
+                transform.LookAt(whoActivatedMe);
+
             DialogManager.Ref.DisplayDialogue(myDialogue, mySpeakers);
         }
 

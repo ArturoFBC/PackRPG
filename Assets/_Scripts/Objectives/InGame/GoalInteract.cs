@@ -5,29 +5,35 @@ using UnityEngine;
 
 namespace GameProgress
 {
-    public class GoalInteract : GoalBehabiourBase
+    public class GoalInteract : GoalBehabiourBase, IInteractable
     {
-        private IInteractable interactable;
+        private bool inProgress = false;
 
         protected override void Awake()
         {
-            interactable = GetComponent<IInteractable>();
-
             base.Awake();
+        }
+
+        public void Interact(Transform whoActivatedMe)
+        {
+            if (inProgress)
+                OnActivation();
         }
 
         protected override void SetCompleted()
         {
-            throw new System.NotImplementedException();
+            gameObject.SetActive(false);
+            inProgress = false;
         }
 
         protected override void SetInProgress()
         {
+            inProgress = true;
         }
 
         protected override void SetNotStarted()
         {
-            throw new System.NotImplementedException();
+            inProgress = false;
         }
 
     }

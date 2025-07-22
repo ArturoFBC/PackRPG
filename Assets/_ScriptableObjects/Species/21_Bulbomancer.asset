@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a43e6dadecf734dbfa4b46a3b06a65, type: 3}
+  m_Name: 21_Bulbomancer
+  m_EditorClassIdentifier: 
+  baseStats:
+  - 60
+  - 60
+  - 70
+  - 75
+  - 70
+  - 60
+  - 95
+  - 90
+  - 0
+  - 10
+  - 5
+  - 10
+  - 10
+  - 10
+  - 0
+  - 0
+  - 1
+  - 1
+  description: 
+  model: {fileID: 0}
+  miniature: {fileID: 0}
+  closeUpImage: {fileID: 0}
+  stepSounds: []
+  skillList: []
+  equipmentSlots: 
+  possibleMorphs: []

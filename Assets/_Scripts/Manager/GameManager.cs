@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour {
         startingPosition.position = DataManager._CurrentArea.startingPosition;
     }
 
+    //TODO Refactor camera. Get out of game manager
     //Get average world position of players, mainly used by camera position
     static public Vector3 GetAveragePlayerPosition()
     {

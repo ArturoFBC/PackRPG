@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 2871476688449017828}
   - component: {fileID: 2871476688449017827}
   - component: {fileID: 3153599894159211664}
+  - component: {fileID: 1923933450}
   m_Layer: 0
   m_Name: DestroyDebreeGoal
   m_TagString: Enemy
@@ -547,7 +548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goalThisCompletes: {fileID: 11400000, guid: f727525e0dbfc744995d55d288eee82d, type: 2}
   goalAdded: 1
-  inertObject: {fileID: 7212640963538352651}
+  inertObject: {fileID: 0}
   destructibleObject: {fileID: 3140629297100921221}
 --- !u!114 &3153599894159211664
 MonoBehaviour:
@@ -561,9 +562,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d639cc2573a0d7459e92341560d84e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myMilestone: {fileID: 0}
-  milestoneStatusTrigger: 0
-  targets: []
+  myMilestone: {fileID: 11400000, guid: 9b3cd0ef4377ab7478aabf9c5449637b, type: 2}
+  milestoneStatusTrigger: 1
+  targets:
+  - {fileID: 7212640963538352651}
+  activeStatus: 1
+--- !u!114 &1923933450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2871476688449017848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d639cc2573a0d7459e92341560d84e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMilestone: {fileID: 11400000, guid: 9b3cd0ef4377ab7478aabf9c5449637b, type: 2}
+  milestoneStatusTrigger: 2
+  targets:
+  - {fileID: 7212640963538352651}
   activeStatus: 0
 --- !u!1 &3140629297100921221
 GameObject:
@@ -574,8 +593,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1981279298321179528}
-  - component: {fileID: 5537478613824931290}
-  - component: {fileID: 905615004435717813}
   - component: {fileID: 7377295517877294956}
   - component: {fileID: 6710074415009404417}
   - component: {fileID: 7982557082250118364}
@@ -611,56 +628,6 @@ Transform:
   m_Father: {fileID: 2871476688449017828}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5537478613824931290
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3140629297100921221}
-  m_Mesh: {fileID: 5668788170693331272, guid: 9e4d15582dca4354b873448803db1c97, type: 3}
---- !u!23 &905615004435717813
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3140629297100921221}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 51f3543b4d8a47b469fa2bd9aaaa567b, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &7377295517877294956
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1361,7 +1328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5927629247671994392
 Transform:
   m_ObjectHideFlags: 0

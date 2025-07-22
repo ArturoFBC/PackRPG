@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8785123561458380142}
   - component: {fileID: 8785123561458380141}
   - component: {fileID: 8785123561458380140}
+  - component: {fileID: 1667311884}
+  - component: {fileID: 9054218933226318342}
   m_Layer: 0
   m_Name: Ankylena_NPC
   m_TagString: Interactable
@@ -96,6 +98,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MyMaterial: {fileID: 2100000, guid: b057619826684144f94c6763c0c023be, type: 2}
+--- !u!114 &1667311884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149535082267290345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04344e210c388414cbcb6a380e32c6fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMilestone: {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
+  milestoneStatusTrigger: 2
+  newDialogue: {fileID: 11400000, guid: 08dfa61de280e0b49a5a025325ef162f, type: 2}
+  myNpc: {fileID: 3535530489281381852}
+--- !u!114 &9054218933226318342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149535082267290345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c4767f7fce06c43bcc4ba4489fd034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMilestone: {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
+  milestoneStatusTrigger: 2
+  myAnimator: {fileID: 593711532060778032}
+  triggerName: KnockedOut
 --- !u!1001 &1490007775454633465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,6 +141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: initial_tank_F2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796359780951156548, guid: d7429a15e3b69ca4c86dfe221b28257e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8415906185353794903, guid: d7429a15e3b69ca4c86dfe221b28257e,
         type: 3}
@@ -163,8 +202,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7787047437217650474, guid: d7429a15e3b69ca4c86dfe221b28257e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7429a15e3b69ca4c86dfe221b28257e, type: 3}
+--- !u!1 &6214270273363606205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4796359780951156548, guid: d7429a15e3b69ca4c86dfe221b28257e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1490007775454633465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &593711532060778032
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6214270273363606205}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e7a9803883db78640bbad7479c823d6b, type: 3}
+  m_Controller: {fileID: 9100000, guid: f7812a8b78c2ae0458989e111870607f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &6946481623266068654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8415906185353794903, guid: d7429a15e3b69ca4c86dfe221b28257e,

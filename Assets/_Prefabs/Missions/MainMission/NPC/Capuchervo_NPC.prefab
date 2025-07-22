@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5259005253363629895}
   - component: {fileID: 2938870}
   - component: {fileID: 2938871}
+  - component: {fileID: 72441391}
+  - component: {fileID: 72441396}
   m_Layer: 0
   m_Name: Capuchervo_NPC
   m_TagString: Interactable
@@ -80,6 +82,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MyMaterial: {fileID: 2100000, guid: b057619826684144f94c6763c0c023be, type: 2}
+--- !u!114 &72441391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8932966861340463218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f399589bcbc87b04eba35a07fd26ed44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalThisCompletes: {fileID: 11400000, guid: 0e640c1f40d7e824f8e063d9c23b3973, type: 2}
+  goalAdded: 1
+  speechIndexToListenFor: 3
+--- !u!114 &72441396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8932966861340463218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04344e210c388414cbcb6a380e32c6fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMilestone: {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
+  milestoneStatusTrigger: 2
+  newDialogue: {fileID: 11400000, guid: ec8003a2c73c57e4ba137af76c64532e, type: 2}
+  myNpc: {fileID: 5259005253363629895}
 --- !u!1001 &6012902024815902849
 PrefabInstance:
   m_ObjectHideFlags: 0
