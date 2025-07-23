@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8785123561458380142}
   - component: {fileID: 8785123561458380141}
   - component: {fileID: 8785123561458380140}
-  - component: {fileID: 1667311884}
   - component: {fileID: 9054218933226318342}
+  - component: {fileID: 7980361633257611912}
   m_Layer: 0
   m_Name: Ankylena_NPC
   m_TagString: Interactable
@@ -98,22 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MyMaterial: {fileID: 2100000, guid: b057619826684144f94c6763c0c023be, type: 2}
---- !u!114 &1667311884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149535082267290345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04344e210c388414cbcb6a380e32c6fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myMilestone: {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
-  milestoneStatusTrigger: 2
-  newDialogue: {fileID: 11400000, guid: 08dfa61de280e0b49a5a025325ef162f, type: 2}
-  myNpc: {fileID: 3535530489281381852}
 --- !u!114 &9054218933226318342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +114,36 @@ MonoBehaviour:
   milestoneStatusTrigger: 2
   myAnimator: {fileID: 593711532060778032}
   triggerName: KnockedOut
+--- !u!114 &7980361633257611912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149535082267290345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73b27adf0bf396428a35f75474cdd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMilestone: {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
+  milestoneStatusTrigger: 2
+  onMilestone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3535530489281381852}
+        m_TargetAssemblyTypeName: Interactables.Dialogue.NPC, Assembly-CSharp
+        m_MethodName: SetDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 08dfa61de280e0b49a5a025325ef162f,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Interactables.Dialogue.Dialogue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1490007775454633465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,8 +234,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6214270273363606205}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e7a9803883db78640bbad7479c823d6b, type: 3}
-  m_Controller: {fileID: 9100000, guid: f7812a8b78c2ae0458989e111870607f, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 787d84cc138889742b65f2e7373310e1, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4ef35211a1fd9f34e9a14c5e4288bd93, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -53,4 +53,37 @@ MonoBehaviour:
       empty: 0
     - type: 0
       empty: 0
+  - species: {fileID: 11400000, guid: faa37471321ea4b44bf902c2993bce1a, type: 2}
+    name: Ankylena
+    exp: 500
+    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+    genotype:
+      stats:
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+    phenotype:
+      stats:
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+    passive_1: {fileID: 0}
+    passive_2: {fileID: 0}
+    passive_3: {fileID: 0}
+    basicAttack: {fileID: 11400000, guid: d038f14d0763e2447a7b0e7bc79c4b64, type: 2}
+    cooldownAttack_1: {fileID: 0}
+    cooldownAttack_2: {fileID: 0}
+    ultimateAttack: {fileID: 0}
+    skillsToLearn: []
+    equipmentSlots: []
   storedCreatures: []

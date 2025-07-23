@@ -508,8 +508,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2871476688449017828}
   - component: {fileID: 2871476688449017827}
-  - component: {fileID: 3153599894159211664}
-  - component: {fileID: 1923933450}
+  - component: {fileID: 7545935988365824934}
+  - component: {fileID: 5314243483570188202}
   m_Layer: 0
   m_Name: DestroyDebreeGoal
   m_TagString: Enemy
@@ -550,7 +550,7 @@ MonoBehaviour:
   goalAdded: 1
   inertObject: {fileID: 0}
   destructibleObject: {fileID: 3140629297100921221}
---- !u!114 &3153599894159211664
+--- !u!114 &7545935988365824934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -559,15 +559,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 2871476688449017848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d639cc2573a0d7459e92341560d84e0, type: 3}
+  m_Script: {fileID: 11500000, guid: e73b27adf0bf396428a35f75474cdd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myMilestone: {fileID: 11400000, guid: 9b3cd0ef4377ab7478aabf9c5449637b, type: 2}
   milestoneStatusTrigger: 1
-  targets:
-  - {fileID: 7212640963538352651}
-  activeStatus: 1
---- !u!114 &1923933450
+  onMilestone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7212640963538352651}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &5314243483570188202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -576,14 +588,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 2871476688449017848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d639cc2573a0d7459e92341560d84e0, type: 3}
+  m_Script: {fileID: 11500000, guid: e73b27adf0bf396428a35f75474cdd66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myMilestone: {fileID: 11400000, guid: 9b3cd0ef4377ab7478aabf9c5449637b, type: 2}
   milestoneStatusTrigger: 2
-  targets:
-  - {fileID: 7212640963538352651}
-  activeStatus: 0
+  onMilestone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3140629297100921221}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7212640963538352651}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3140629297100921221
 GameObject:
   m_ObjectHideFlags: 0

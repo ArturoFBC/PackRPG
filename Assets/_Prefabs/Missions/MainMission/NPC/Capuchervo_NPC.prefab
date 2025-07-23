@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2938870}
   - component: {fileID: 2938871}
   - component: {fileID: 72441391}
-  - component: {fileID: 72441396}
+  - component: {fileID: 72441400}
+  - component: {fileID: 2063927010741202387}
   m_Layer: 0
   m_Name: Capuchervo_NPC
   m_TagString: Interactable
@@ -97,7 +98,7 @@ MonoBehaviour:
   goalThisCompletes: {fileID: 11400000, guid: 0e640c1f40d7e824f8e063d9c23b3973, type: 2}
   goalAdded: 1
   speechIndexToListenFor: 3
---- !u!114 &72441396
+--- !u!114 &72441400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,13 +107,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 8932966861340463218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04344e210c388414cbcb6a380e32c6fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 87c4767f7fce06c43bcc4ba4489fd034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myMilestone: {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
   milestoneStatusTrigger: 2
-  newDialogue: {fileID: 11400000, guid: ec8003a2c73c57e4ba137af76c64532e, type: 2}
-  myNpc: {fileID: 5259005253363629895}
+  myAnimator: {fileID: 1926772489590047417}
+  triggerName: KnockedOut
+--- !u!114 &2063927010741202387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8932966861340463218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73b27adf0bf396428a35f75474cdd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMilestone: {fileID: 11400000, guid: 5c15c0e64121a5c478ece13d6ea2d71d, type: 2}
+  milestoneStatusTrigger: 2
+  onMilestone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5259005253363629895}
+        m_TargetAssemblyTypeName: Interactables.Dialogue.NPC, Assembly-CSharp
+        m_MethodName: SetDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: ec8003a2c73c57e4ba137af76c64532e,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Interactables.Dialogue.Dialogue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &6012902024815902849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,6 +213,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90cbd1b9f9b1ad4b9d488eeada94bbc, type: 3}
+--- !u!95 &1926772489590047417 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5318570660826677816, guid: a90cbd1b9f9b1ad4b9d488eeada94bbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 6012902024815902849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8374239681957998531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2829764800596619074, guid: a90cbd1b9f9b1ad4b9d488eeada94bbc,

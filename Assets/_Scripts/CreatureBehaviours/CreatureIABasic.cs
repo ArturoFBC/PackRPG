@@ -44,7 +44,7 @@ public class CreatureIABasic : MonoBehaviour
 
     public Skill _CurrentSkill;
 
-    public static float _InteractRange = 3f;
+    public static float _InteractRange = 5f;
 
     void Awake()
     {
@@ -218,7 +218,10 @@ public class CreatureIABasic : MonoBehaviour
 
     private void MoveInToInteract()
     {
-        bool inRange = (_BasicAttackTarget.transform.position - transform.position).sqrMagnitude < Mathf.Pow(_InteractRange, 2);
+        float sqrDistance = (_BasicAttackTarget.transform.position - transform.position).sqrMagnitude;
+        float sqrRange = Mathf.Pow(_InteractRange, 2);
+
+        bool inRange = (sqrDistance < sqrRange);
         if (inRange)
             Interact();
         else

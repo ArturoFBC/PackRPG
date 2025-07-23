@@ -21,11 +21,6 @@ public class CameraShake : MonoBehaviour
         StartCoroutine(ShakeCoroutine());
     }
 
-    private void OnEnable()
-    {
-        Shake();
-    }
-
     private IEnumerator ShakeCoroutine()
     {
         float timeCounter = 0;

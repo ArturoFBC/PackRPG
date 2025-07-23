@@ -13,13 +13,11 @@ namespace GameProgress
         [SerializeField] private GameObject baseCreature;
 
         private GameObject creatureToHeal;
-        private GameObject creatureToHealInactive;
+        [SerializeField] private GameObject creatureToHealInactive;
 
         protected override void SetNotStarted()
         {
-            creatureToHealInactive = Instantiate(creatureToHealData.species.model, transform);
 
-            creatureToHealInactive.GetComponent<Animator>().SetTrigger("KnockedOut");
         }
 
         protected override void SetInProgress()

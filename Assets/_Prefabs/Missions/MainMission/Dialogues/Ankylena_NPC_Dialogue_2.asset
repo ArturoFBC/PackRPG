@@ -15,7 +15,7 @@ MonoBehaviour:
   saveSpeeches:
   - text: I have to save the egg first! I will heal him right after.
     childrenIDs: 
-    speakerID: 0
+    speakerID: 1
     editorPosition:
       serializedVersion: 2
       x: 0
