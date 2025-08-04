@@ -35,4 +35,9 @@ public class HealthGlobe : PickUp
 
         return RolePlayingFormulas.HealthManaGlobesDrop(fillPercent);
     }
+
+    public override string GetDisplayName()
+    {
+        return "Health globe";
+    }
 }

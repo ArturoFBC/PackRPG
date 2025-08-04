@@ -389,6 +389,9 @@ public abstract class Skill : MonoBehaviour {
             case SkillImplementation.GroupHealing:
                 newSkill = creature.AddComponent<GroupHealing>() as Skill;
                 break;
+            case SkillImplementation.ChainHit:
+                newSkill = creature.AddComponent<ChainAreaDamage>() as Skill;
+                break;
             default: //MeleeSingleTarget
                 newSkill = creature.AddComponent<MeleeSingleTarget>() as Skill;
                 break;

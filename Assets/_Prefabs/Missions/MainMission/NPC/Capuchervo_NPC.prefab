@@ -51,11 +51,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpeakers:
-  - speakerName: Crohood
+  - speakerName: Krohood
     speakerAvatar: {fileID: 21300000, guid: 87477793c3b7e5149a4d34cf6241539a, type: 3}
   - speakerName: Canigrade
     speakerAvatar: {fileID: 21300000, guid: 26cbe61a2c0222c4c9cfa11de1c099ee, type: 3}
   myDialogue: {fileID: 11400000, guid: f52341dbab4a79246b7cce26c8b50816, type: 2}
+  displayName: Krohood
 --- !u!136 &2938870
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -26,4 +26,9 @@ public class PhenotypeBoosterGlobe : PickUp
         DisplayVisualEffects(whoActivatedMe);
         DisplayAudioEffect();
     }
+
+    public override string GetDisplayName()
+    {
+        return $"Phenotype {myPrimaryStat.ToString()} booster";
+    }
 }

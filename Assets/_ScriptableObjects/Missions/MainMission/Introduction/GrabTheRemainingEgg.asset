@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b7a45caae0a2a747bd107870b4987bf, type: 3}
-  m_Name: AttackDebree
+  m_Name: GrabTheRemainingEgg
   m_EditorClassIdentifier: 
-  id: Destroy debree
-  description: Destroy debree blocking the way.
+  id: Grab the remaining egg milestone
+  description: Grab the remaining egg.
   goalList:
-  - {fileID: 11400000, guid: f727525e0dbfc744995d55d288eee82d, type: 2}
+  - {fileID: 11400000, guid: 4eef1050703105340854c9a435bbf66e, type: 2}

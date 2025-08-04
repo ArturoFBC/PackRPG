@@ -17,7 +17,7 @@ MonoBehaviour:
     milestoneCurrentValues:
     - id: Return to packmates milestone
       goalCurrentValues:
-      - id: Return to your packmates goal
+      - id: Return to packmates goal
         currentValue: 0
         completed: 0
       completed: 0

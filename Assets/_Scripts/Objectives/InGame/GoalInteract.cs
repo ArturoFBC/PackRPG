@@ -9,6 +9,8 @@ namespace GameProgress
     {
         private bool inProgress = false;
 
+        [SerializeField] private string displayName;
+
         protected override void Awake()
         {
             base.Awake();
@@ -36,5 +38,12 @@ namespace GameProgress
             inProgress = false;
         }
 
+        public string GetDisplayName()
+        {
+            if (string.IsNullOrEmpty(displayName))
+                return gameObject.name;
+
+            return displayName;
+        }
     }
 }

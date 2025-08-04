@@ -6,9 +6,6 @@ public class MouseOverIndicator : MonoBehaviour
 {
     [SerializeField] private Material _MyMaterial;
 
-    private MouseOverManager myMouseOver;
-
-
     private void Start()
     {
         if (_MyMaterial == null)

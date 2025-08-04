@@ -17,6 +17,8 @@ namespace Interactables.Dialogue
         [SerializeField] private List<Speaker> mySpeakers;
         [SerializeField] private Dialogue myDialogue;
 
+        [SerializeField] private string displayName;
+
         public void SetDialogue(Dialogue newDialogue)
         {
             myDialogue = newDialogue;
@@ -33,6 +35,20 @@ namespace Interactables.Dialogue
         internal Dialogue GetDialogue()
         {
             return myDialogue;
+        }
+
+        public string GetDisplayName()
+        {
+            if (string.IsNullOrEmpty(displayName))
+            {
+                if (mySpeakers != null && mySpeakers.Count > 0)
+                    return mySpeakers[0].speakerName;
+                else
+                    return gameObject.name;
+            }
+
+            return displayName;
+
         }
     }
 }

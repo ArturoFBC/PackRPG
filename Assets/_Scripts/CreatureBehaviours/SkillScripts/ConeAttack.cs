@@ -19,7 +19,6 @@ public class ConeAttack : Skill {
             FXTransform.position += new Vector3(0, 1f, 0);
         }
 
-
         ExecutionCounters();
     }
 

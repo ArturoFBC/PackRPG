@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b7a45caae0a2a747bd107870b4987bf, type: 3}
-  m_Name: CheckOnTheEggs
+  m_Name: ExitTheLair
   m_EditorClassIdentifier: 
-  id: Check on the eggs.
-  description: Check on the eggs.
+  id: ExitTheLair
+  description: Exit the lair.
   goalList:
-  - {fileID: 11400000, guid: 4d2580acac57aa4449993a68173694b0, type: 2}
+  - {fileID: 11400000, guid: d2f7d4b9ec8889e4d99eaaf0be397b5b, type: 2}

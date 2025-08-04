@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using Pack.Scripts.Scenes;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangeSceneButton : MonoBehaviour
 {
@@ -8,26 +10,26 @@ public class ChangeSceneButton : MonoBehaviour
     {
         DataManager.SetArea(destinationArea);
 
-        SceneLoader._Reference.GoToArea();
+        SceneLoader.Ref.GoToArea();
     }
 
     public void GoToLair()
     {
-        SceneLoader._Reference.GoToLair();
+        SceneLoader.Ref.GoToLair();
     }
 
     public void GoToMenu()
     {
-        SceneLoader._Reference.GoToMenu();
+        SceneLoader.Ref.GoToMenu();
     }
 
     public void GoToStarterSelection()
     {
-        SceneLoader._Reference.GoToStarterSelection();
+        SceneLoader.Ref.GoToStarterSelection();
     }
 
     public void QuitGame()
     {
-        SceneLoader._Reference.CloseApplication();
+        SceneLoader.Ref.CloseApplication();
     }
 }

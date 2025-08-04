@@ -47,4 +47,6 @@ public abstract class PickUp : MonoBehaviour, IInteractable
             Interact(other.transform);
         }
     }
+
+    public abstract string GetDisplayName();
 }

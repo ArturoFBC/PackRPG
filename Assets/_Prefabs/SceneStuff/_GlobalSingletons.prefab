@@ -220,6 +220,8 @@ MonoBehaviour:
     loop: {fileID: 8300000, guid: 02db1a8d094ebb0468cfa4ed1b18c586, type: 3}
   - intro: {fileID: 0}
     loop: {fileID: 8300000, guid: 01f79dc03d6682f439c8e477fe376624, type: 3}
+  - intro: {fileID: 0}
+    loop: {fileID: 8300000, guid: 51fbed29dbddea94ca281e16b1c86161, type: 3}
   currentTrack: 0
 --- !u!114 &3248565085554995532
 MonoBehaviour:

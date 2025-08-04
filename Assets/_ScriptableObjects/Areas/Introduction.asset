@@ -23,5 +23,6 @@ MonoBehaviour:
     spawnRate: 0.2
   items: []
   startingPosition: {x: 0, y: 0, z: 0}
-  exitToNextAreaPosition: {x: 0, y: 0, z: 0}
+  exitToNextAreaPosition: {x: 25.4, y: 2.96, z: 22}
   nextArea: {fileID: 0}
+  requiredMilestones: []

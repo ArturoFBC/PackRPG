@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Pack.Scripts.Scenes;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -95,6 +96,6 @@ public class InitialCreatureChooseMenu : MonoBehaviour
 
         creatureAnimators[index]?.Play("ClawAttack");
         //DataManager.SaveData();
-        SceneLoader._Reference.GoToLair();
+        SceneLoader.Ref.GoToLair();
     }
 }

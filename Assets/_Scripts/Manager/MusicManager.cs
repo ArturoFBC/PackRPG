@@ -7,7 +7,8 @@ public enum MusicTrackType
 {
     MAIN_MENU,
     LAIR,
-    SWAMP
+    SWAMP,
+    TENSION
 }
 
 [System.Serializable]

@@ -40,7 +40,8 @@ public class MouseOverManager : Singleton<MouseOverManager>
         switch (underCursor.tag )
         {
             case "Interactable":
-                InGameGUIManager._Ref.ShowInteractableInfo(underCursor);
+                IInteractable interactableUnderCursor = underCursor.GetComponent<IInteractable>();
+                InGameGUIManager._Ref.ShowInteractableInfo(interactableUnderCursor);
                 break;
             case "Enemy":
                 InGameGUIManager._Ref.ShowEnemyInfo(underCursor);

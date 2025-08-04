@@ -277,10 +277,10 @@ public class InGameGUIManager : MonoBehaviour
             _MouseOverInfoDisplay.StopDisplay();
     }
 
-    public void ShowInteractableInfo(GameObject interactable)
+    public void ShowInteractableInfo(IInteractable interactable)
     {
         if (interactable != null)
-            _MouseOverInfoDisplay.DisplayName(interactable.name);
+            _MouseOverInfoDisplay.DisplayName(interactable.GetDisplayName());
         else
             _MouseOverInfoDisplay.StopDisplay();
     }

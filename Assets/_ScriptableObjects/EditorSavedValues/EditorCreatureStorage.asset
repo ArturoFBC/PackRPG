@@ -42,10 +42,9 @@ MonoBehaviour:
     passive_3: {fileID: 0}
     basicAttack: {fileID: 11400000, guid: e9d3493e71047e147ac881bff3f8126c, type: 2}
     cooldownAttack_1: {fileID: 11400000, guid: 69d9458b4ac1d8b488db2885ed5e9663, type: 2}
-    cooldownAttack_2: {fileID: 11400000, guid: d0adf78777af30147a184181b4440a9e, type: 2}
+    cooldownAttack_2: {fileID: 11400000, guid: d30751efb7f85be4285460d3de649196, type: 2}
     ultimateAttack: {fileID: 0}
-    skillsToLearn:
-    - {fileID: 11400000, guid: 69d9458b4ac1d8b488db2885ed5e9663, type: 2}
+    skillsToLearn: []
     equipmentSlots:
     - type: 1
       empty: 0
@@ -53,37 +52,4 @@ MonoBehaviour:
       empty: 0
     - type: 0
       empty: 0
-  - species: {fileID: 11400000, guid: faa37471321ea4b44bf902c2993bce1a, type: 2}
-    name: Ankylena
-    exp: 500
-    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
-    genotype:
-      stats:
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-    phenotype:
-      stats:
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-      - 5
-    passive_1: {fileID: 0}
-    passive_2: {fileID: 0}
-    passive_3: {fileID: 0}
-    basicAttack: {fileID: 11400000, guid: d038f14d0763e2447a7b0e7bc79c4b64, type: 2}
-    cooldownAttack_1: {fileID: 0}
-    cooldownAttack_2: {fileID: 0}
-    ultimateAttack: {fileID: 0}
-    skillsToLearn: []
-    equipmentSlots: []
   storedCreatures: []

@@ -89,4 +89,9 @@ public class PickUpItem : PickUp
     {
         if (DamageAndPickupsDisplayManager.Ref != null) DamageAndPickupsDisplayManager.Ref.DisplayPickup(myDrop.amount, myDrop.dropable.GetName(), transform.position);
     }
+
+    public override string GetDisplayName()
+    {
+        return myDrop.dropable.GetName();
+    }
 }

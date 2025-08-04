@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e89b40b4587854f8ad2190deb4161f, type: 3}
+  m_Name: ChainLighting
+  m_EditorClassIdentifier: 
+  description: Unleashes chain lighing on enemies
+  icon: {fileID: 21300000, guid: 682e88d65705630468a965e2efa7183e, type: 3}
+  projectile: {fileID: 0}
+  useVFX: {fileID: 3084278370617210932, guid: ab7aaa06a1c974e4ea1f5d0885022b68, type: 3}
+  targetVFX: {fileID: 0}
+  targetType: 3
+  useRange: 10
+  effectRange: 3
+  damage: 10
+  criticalChance: 0.05
+  criticalDamage: 2
+  damageType: 6
+  damageClass: 2
+  lifeSteal: 0
+  cooldown: 6
+  StatModifiersForTarget: []
+  StatusEffects: []
+  DamageOverTimeEffects: []
+  ModifiersOnCondition: []
+  impactSound: {fileID: 8300000, guid: e6fa6f2811d49d24f9de8cb5e0f7cd82, type: 3}
+  tags: 13000000
+  skillImplementation: 10
+  category: 1
+  animationTrigger: ClawAttack
+  executionDuration: 0.6
+  hitInstant: 0.3
+  creationsDuration: 0
+  manaCost: 20
+  castingSound: {fileID: 8300000, guid: 60686c308b6e50d4a9a9373bf5a17af4, type: 3}

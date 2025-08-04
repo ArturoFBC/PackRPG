@@ -32,4 +32,9 @@ public class ManaGlobe : PickUp
 
         return RolePlayingFormulas.HealthManaGlobesDrop(fillPercent);
     }
+
+    public override string GetDisplayName()
+    {
+        return "Mana globe";
+    }
 }

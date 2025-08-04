@@ -75,6 +75,7 @@ public enum SkillImplementation
     ProximityBuff,
     Bolt,
     GroupHealing,
+    ChainHit,
     END
 }
 

@@ -10,7 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f85d07c0aa0705408c9ebee7844d1ee, type: 3}
-  m_Name: New Dialogue
+  m_Name: Ankylena_NPC_Dialogue_3
   m_EditorClassIdentifier: 
-  saveSpeeches: []
-  saveSpeechIDs: 
+  saveSpeeches:
+  - text: I can use my skill Life force (pressing number 2 or the skill icon by my
+      avatar) to help him!
+    childrenIDs: 
+    speakerID: 1
+    editorPosition:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 250
+      height: 90
+  saveSpeechIDs: 00000000

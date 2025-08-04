@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class DropsItemsOnInteract : DropsItems, IInteractable
 {
+    [SerializeField] private string displayName;
+
+    public string GetDisplayName()
+    {
+        if (string.IsNullOrEmpty(displayName))
+            return gameObject.name;
+
+        return displayName;
+    }
+
     public void Interact(Transform whoActivatedMe)
     {
         DropItems();

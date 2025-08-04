@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8785123561458380140}
   - component: {fileID: 9054218933226318342}
   - component: {fileID: 7980361633257611912}
+  - component: {fileID: 325153321}
+  - component: {fileID: 1876083114861679692}
   m_Layer: 0
   m_Name: Ankylena_NPC
   m_TagString: Interactable
@@ -56,6 +58,7 @@ MonoBehaviour:
   - speakerName: Canigrade
     speakerAvatar: {fileID: 21300000, guid: 26cbe61a2c0222c4c9cfa11de1c099ee, type: 3}
   myDialogue: {fileID: 11400000, guid: 79eb7b1a733e57e4f9ace6046ac2aeeb, type: 2}
+  displayName: Ankylena
 --- !u!114 &8785123561458380142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +140,87 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 08dfa61de280e0b49a5a025325ef162f,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Interactables.Dialogue.Dialogue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &325153321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149535082267290345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdab856155460bd40bf8b353a3f4af98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalThisCompletes: {fileID: 11400000, guid: 9d3932107491bdd44b7c083d67222747, type: 2}
+  goalAdded: 1
+  creatureToHealData:
+    species: {fileID: 11400000, guid: faa37471321ea4b44bf902c2993bce1a, type: 2}
+    name: Ankylena
+    exp: 500
+    secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+    genotype:
+      stats:
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+    phenotype:
+      stats:
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+    passive_1: {fileID: 0}
+    passive_2: {fileID: 0}
+    passive_3: {fileID: 0}
+    basicAttack: {fileID: 11400000, guid: d038f14d0763e2447a7b0e7bc79c4b64, type: 2}
+    cooldownAttack_1: {fileID: 0}
+    cooldownAttack_2: {fileID: 0}
+    ultimateAttack: {fileID: 0}
+    skillsToLearn: []
+    equipmentSlots: []
+  baseCreature: {fileID: 747506733965700808, guid: 3aecbac4c3fe78347abc41c11b3f0d8c,
+    type: 3}
+  creatureToHealInactive: {fileID: 0}
+--- !u!114 &1876083114861679692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149535082267290345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73b27adf0bf396428a35f75474cdd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMilestone: {fileID: 11400000, guid: 1093e0765e1010b45bf3ed2abc7707b9, type: 2}
+  milestoneStatusTrigger: 1
+  onMilestone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3535530489281381852}
+        m_TargetAssemblyTypeName: Interactables.Dialogue.NPC, Assembly-CSharp
+        m_MethodName: SetDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 0e00665ace0411346bfdc7754a4fba1b,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: Interactables.Dialogue.Dialogue, Assembly-CSharp
           m_IntArgument: 0
